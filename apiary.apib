@@ -1,36 +1,36 @@
 FORMAT: 1A
 HOST: http://polls.apiblueprint.org/
 
-# add-edit-candidate
+# add-edit-job
 
-What is created during add_new_candidate form filling and what need to be received to edit the candidate data.
+Which used to create or update the job - full job object.
 
-## Candidates Collection [/candidates]
+## Jobs Collection [/jobs]
 
-### List All Candidates [GET]
+### List All Jobs [GET]
 
 + Response 200 (application/json)
 
         {
-          "candidates": [
+          "jobs": [
             {
-              "personal": {
-                "firstName": "Bruce",
-                "lastName": "Wayne",
-                "gender": "male",
-                "birthday": "2011 0 1",
-                "ID": 150,
+              "jobInformation": {
+                "company": "The Best",
+                "title": "Best of the best",
+                "description": "Some text",
                 "country": "Israel",
                 "city": "Yavne",
-                "phone": "+33 973 52 12",
-                "phone2": "",
-                "description": "Some text",
-                "militaryHistory": "Army general",
-                "email": "fdsf@fdfs.gf"
+                "worksScope": "some scope",
+                "maxSalary": 5000,
+                "availability": "yes",
+                "days": 7,
+                "businessModel": "Some Model",
+                "relocation": true,
+                "ID": 150
               },
               "academic": [
                 {"placeholder": "Text text", "value": "Professor"},
-                {"placeholder": "Text text", "value": ""},
+                {"placeholder": "Text text", "value": "Nobody"},
                 {"placeholder": "Text text", "value": ""},
                 {"placeholder": "Text text", "value": ""}
               ],
@@ -40,62 +40,22 @@ What is created during add_new_candidate form filling and what need to be receiv
                 {"placeholder": "Text text", "value": ""},
                 {"placeholder": "Text text", "value": ""}
               ],
-              "coursesDiplomasNotes": "Nothing special",
-              "skills": [
+              "skillsNeeded": [
                 {"selected": "JS", "knowledge": "5"},
                 {"selected": "PHP", "knowledge": "8"},
                 {"selected": "", "knowledge": "1"},
                 {"selected": "", "knowledge": "1"}
               ],
-              "languages": [
+              "languagesNeeded": [
                 {"selected": "English", "knowledge": "8"},
                 {"selected": "French", "knowledge": "10"},
                 {"selected": "", "knowledge": "1"},
                 {"selected": "", "knowledge": "1"}
               ],
-              "usersJobsList": [
-                {
-                  "companyName": "Good company",
-                  "companyRole": "Worker",
-                  "period": {
-                    "since": "2011 0 1",
-                    "till": "2014 0 1"
-                  },
-                  "freeText": "Some free text"
-                },
-                {
-                  "companyName": "Bad company",
-                  "companyShortName": "Worst company",
-                  "companyRole": "No one",
-                  "period": {
-                    "since": "2011 0 1",
-                    "till": "2015 0 1"
-                  },
-                  "freeText": "The same text as always"
-                },
-                {
-                  "companyName": "Long company",
-                  "companyShortName": "The longest company name in the world",
-                  "companyRole": "No one",
-                  "period": {
-                    "since": "2011 0 1",
-                    "till": "2015 0 1"
-                  },
-                  "freeText": "The same text as always"
-                }
-              ],
-              "job": {
-                "currentSalary": 5000,
-                "desiredSalary": 8000,
-                "campaignSource": "Something",
-                "desiredPosition": "Team lead",
-                "relocation": true,
-                "workScope": "JS PHP",
-                "availability": "yes",
-                "days": 15
-              },
+              "notes": "Some interesting comment",
+              "editMode": false,
               "active": true,
-              "usersCallsList": [
+              "jobsCallsList": [
                 {
                   "date": "2008 3 4",
                   "freeText": "Bla bla bla bla"
@@ -111,23 +71,23 @@ What is created during add_new_candidate form filling and what need to be receiv
               ]
             },
             {
-              "personal": {
-                "firstName": "Clark",
-                "lastName": "Kent",
-                "gender": "male",
-                "birthday": "2013 3 1",
-                "ID": 151,
+              "jobInformation": {
+                "company": "The Worst",
+                "title": "Worst of the worst",
+                "description": "Some text",
                 "country": "Israel",
                 "city": "Yavne",
-                "phone": "+33 973 52 12",
-                "phone2": "",
-                "description": "Some text",
-                "militaryHistory": "Army general",
-                "email": "fdsf@fdfs.gf"
+                "worksScope": "some scope",
+                "maxSalary": 5000,
+                "availability": "yes",
+                "days": 7,
+                "businessModel": "Some Model",
+                "relocation": true,
+                "ID": 151
               },
               "academic": [
                 {"placeholder": "Text text", "value": "Professor"},
-                {"placeholder": "Text text", "value": ""},
+                {"placeholder": "Text text", "value": "Nobody"},
                 {"placeholder": "Text text", "value": ""},
                 {"placeholder": "Text text", "value": ""}
               ],
@@ -137,51 +97,22 @@ What is created during add_new_candidate form filling and what need to be receiv
                 {"placeholder": "Text text", "value": ""},
                 {"placeholder": "Text text", "value": ""}
               ],
-              "coursesDiplomasNotes": "Nothing special",
-              "skills": [
+              "skillsNeeded": [
                 {"selected": "JS", "knowledge": "5"},
                 {"selected": "PHP", "knowledge": "8"},
                 {"selected": "", "knowledge": "1"},
                 {"selected": "", "knowledge": "1"}
               ],
-              "languages": [
+              "languagesNeeded": [
                 {"selected": "English", "knowledge": "8"},
                 {"selected": "French", "knowledge": "10"},
                 {"selected": "", "knowledge": "1"},
                 {"selected": "", "knowledge": "1"}
               ],
-              "usersJobsList": [
-                {
-                  "companyName": "Good company",
-                  "companyRole": "Worker",
-                  "period": {
-                    "since": "2011 0 1",
-                    "till": "2016 0 1"
-                  },
-                  "freeText": "Some free text"
-                },
-                {
-                  "companyName": "Bad company",
-                  "companyRole": "No one",
-                  "period": {
-                    "since": "2011 0 1",
-                    "till": "2014 0 1"
-                  },
-                  "freeText": "The same text as always"
-                }
-              ],
-              "job": {
-                "currentSalary": 5000,
-                "desiredSalary": 8000,
-                "campaignSource": "Something",
-                "desiredPosition": "Team lead",
-                "relocation": true,
-                "workScope": "JS PHP",
-                "availability": "yes",
-                "days": 15
-              },
+              "notes": "Some interesting comment",
+              "editMode": false,
               "active": true,
-              "usersCallsList": [
+              "jobsCallsList": [
                 {
                   "date": "2008 3 4",
                   "freeText": "Bla bla bla bla"
@@ -197,23 +128,23 @@ What is created during add_new_candidate form filling and what need to be receiv
               ]
             },
             {
-              "personal": {
-                "firstName": "Selina",
-                "lastName": "Kyle",
-                "gender": "female",
-                "birthday": "1980 0 1",
-                "ID": 152,
+              "jobInformation": {
+                "company": "Nothing special",
+                "title": "Nothing of the nothing",
+                "description": "Some text",
                 "country": "Israel",
                 "city": "Yavne",
-                "phone": "+33 973 52 12",
-                "phone2": "",
-                "description": "Some text",
-                "militaryHistory": "Army general",
-                "email": "fdsf@fdfs.gf"
+                "worksScope": "some scope",
+                "maxSalary": 5000,
+                "availability": "yes",
+                "days": 7,
+                "businessModel": "Some Model",
+                "relocation": true,
+                "ID": 152
               },
               "academic": [
                 {"placeholder": "Text text", "value": "Professor"},
-                {"placeholder": "Text text", "value": ""},
+                {"placeholder": "Text text", "value": "Nobody"},
                 {"placeholder": "Text text", "value": ""},
                 {"placeholder": "Text text", "value": ""}
               ],
@@ -223,51 +154,22 @@ What is created during add_new_candidate form filling and what need to be receiv
                 {"placeholder": "Text text", "value": ""},
                 {"placeholder": "Text text", "value": ""}
               ],
-              "coursesDiplomasNotes": "Nothing special",
-              "skills": [
+              "skillsNeeded": [
                 {"selected": "JS", "knowledge": "5"},
                 {"selected": "PHP", "knowledge": "8"},
                 {"selected": "", "knowledge": "1"},
                 {"selected": "", "knowledge": "1"}
               ],
-              "languages": [
+              "languagesNeeded": [
                 {"selected": "English", "knowledge": "8"},
                 {"selected": "French", "knowledge": "10"},
                 {"selected": "", "knowledge": "1"},
                 {"selected": "", "knowledge": "1"}
               ],
-              "usersJobsList": [
-                {
-                  "companyName": "Good company",
-                  "companyRole": "Worker",
-                  "period": {
-                    "since": "2011 0 1",
-                    "till": "2013 0 1"
-                  },
-                  "freeText": "Some free text"
-                },
-                {
-                  "companyName": "Bad company",
-                  "companyRole": "No one",
-                  "period": {
-                    "since": "2011 0 1",
-                    "till": "2014 0 1"
-                  },
-                  "freeText": "The same text as always"
-                }
-              ],
-              "job": {
-                "currentSalary": 5000,
-                "desiredSalary": 8000,
-                "campaignSource": "Something",
-                "desiredPosition": "Team lead",
-                "relocation": true,
-                "workScope": "JS PHP",
-                "availability": "yes",
-                "days": 15
-              },
+              "notes": "Some interesting comment",
+              "editMode": false,
               "active": true,
-              "usersCallsList": [
+              "jobsCallsList": [
                 {
                   "date": "2008 3 4",
                   "freeText": "Bla bla bla bla"
@@ -283,23 +185,23 @@ What is created during add_new_candidate form filling and what need to be receiv
               ]
             },
             {
-              "personal": {
-                "firstName": "Peter Benjamin",
-                "lastName": "Parker",
-                "gender": "male",
-                "birthday": "1988 4 1",
-                "ID": 153,
+              "jobInformation": {
+                "company": "Unusual company",
+                "title": "Unusual of the unusual",
+                "description": "Some text",
                 "country": "Israel",
                 "city": "Yavne",
-                "phone": "+33 973 52 12",
-                "phone2": "",
-                "description": "Some text",
-                "militaryHistory": "Army general",
-                "email": "fdsf@fdfs.gf"
+                "worksScope": "some scope",
+                "maxSalary": 5000,
+                "availability": "yes",
+                "days": 7,
+                "businessModel": "Some Model",
+                "relocation": true,
+                "ID": 153
               },
               "academic": [
                 {"placeholder": "Text text", "value": "Professor"},
-                {"placeholder": "Text text", "value": ""},
+                {"placeholder": "Text text", "value": "Nobody"},
                 {"placeholder": "Text text", "value": ""},
                 {"placeholder": "Text text", "value": ""}
               ],
@@ -309,51 +211,22 @@ What is created during add_new_candidate form filling and what need to be receiv
                 {"placeholder": "Text text", "value": ""},
                 {"placeholder": "Text text", "value": ""}
               ],
-              "coursesDiplomasNotes": "Nothing special",
-              "skills": [
+              "skillsNeeded": [
                 {"selected": "JS", "knowledge": "5"},
                 {"selected": "PHP", "knowledge": "8"},
                 {"selected": "", "knowledge": "1"},
                 {"selected": "", "knowledge": "1"}
               ],
-              "languages": [
+              "languagesNeeded": [
                 {"selected": "English", "knowledge": "8"},
                 {"selected": "French", "knowledge": "10"},
                 {"selected": "", "knowledge": "1"},
                 {"selected": "", "knowledge": "1"}
               ],
-              "usersJobsList": [
-                {
-                  "companyName": "Good company",
-                  "companyRole": "Worker",
-                  "period": {
-                    "since": "2002 0 1",
-                    "till": "2005 0 1"
-                  },
-                  "freeText": "Some free text"
-                },
-                {
-                  "companyName": "Bad company",
-                  "companyRole": "No one",
-                  "period": {
-                    "since": "2008 0 1",
-                    "till": "2011 0 1"
-                  },
-                  "freeText": "The same text as always"
-                }
-              ],
-              "job": {
-                "currentSalary": 5000,
-                "desiredSalary": 8000,
-                "campaignSource": "Something",
-                "desiredPosition": "Team lead",
-                "relocation": true,
-                "workScope": "JS PHP",
-                "availability": "yes",
-                "days": 15
-              },
+              "notes": "Some interesting comment",
+              "editMode": false,
               "active": true,
-              "usersCallsList": [
+              "jobsCallsList": [
                 {
                   "date": "2008 3 4",
                   "freeText": "Bla bla bla bla"
@@ -369,23 +242,23 @@ What is created during add_new_candidate form filling and what need to be receiv
               ]
             },
             {
-              "personal": {
-                "firstName": "Sean",
-                "lastName": "Cassidy",
-                "gender": "male",
-                "birthday": "1976 0 1",
-                "ID": 154,
+              "jobInformation": {
+                "company": "Incredible company",
+                "title": "Incredible of the incredible",
+                "description": "Some text",
                 "country": "Israel",
                 "city": "Yavne",
-                "phone": "+33 973 52 12",
-                "phone2": "",
-                "description": "Some text",
-                "militaryHistory": "Army general",
-                "email": "fdsf@fdfs.gf"
+                "worksScope": "some scope",
+                "maxSalary": 5000,
+                "availability": "yes",
+                "days": 7,
+                "businessModel": "Some Model",
+                "relocation": true,
+                "ID": 154
               },
               "academic": [
                 {"placeholder": "Text text", "value": "Professor"},
-                {"placeholder": "Text text", "value": ""},
+                {"placeholder": "Text text", "value": "Nobody"},
                 {"placeholder": "Text text", "value": ""},
                 {"placeholder": "Text text", "value": ""}
               ],
@@ -395,51 +268,22 @@ What is created during add_new_candidate form filling and what need to be receiv
                 {"placeholder": "Text text", "value": ""},
                 {"placeholder": "Text text", "value": ""}
               ],
-              "coursesDiplomasNotes": "Nothing special",
-              "skills": [
+              "skillsNeeded": [
                 {"selected": "JS", "knowledge": "5"},
                 {"selected": "PHP", "knowledge": "8"},
                 {"selected": "", "knowledge": "1"},
                 {"selected": "", "knowledge": "1"}
               ],
-              "languages": [
+              "languagesNeeded": [
                 {"selected": "English", "knowledge": "8"},
                 {"selected": "French", "knowledge": "10"},
                 {"selected": "", "knowledge": "1"},
                 {"selected": "", "knowledge": "1"}
               ],
-              "usersJobsList": [
-                {
-                  "companyName": "Good company",
-                  "companyRole": "Worker",
-                  "period": {
-                    "since": "2011 0 1",
-                    "till": "2011 0 1"
-                  },
-                  "freeText": "Some free text"
-                },
-                {
-                  "companyName": "Bad company",
-                  "companyRole": "No one",
-                  "period": {
-                    "since": "2011 0 1",
-                    "till": "2011 0 1"
-                  },
-                  "freeText": "The same text as always"
-                }
-              ],
-              "job": {
-                "currentSalary": 5000,
-                "desiredSalary": 8000,
-                "campaignSource": "Something",
-                "desiredPosition": "Team lead",
-                "relocation": true,
-                "workScope": "JS PHP",
-                "availability": "yes",
-                "days": 15
-              },
+              "notes": "Some interesting comment",
+              "editMode": false,
               "active": true,
-              "usersCallsList": [
+              "jobsCallsList": [
                 {
                   "date": "2008 3 4",
                   "freeText": "Bla bla bla bla"
@@ -455,23 +299,23 @@ What is created during add_new_candidate form filling and what need to be receiv
               ]
             },
             {
-              "personal": {
-                "firstName": "Tanya",
-                "lastName": "Sealy",
-                "gender": "female",
-                "birthday": "2011 0 1",
-                "ID": 155,
+              "jobInformation": {
+                "company": "Stupid",
+                "title": "Stupid of the stupid",
+                "description": "Some text",
                 "country": "Israel",
                 "city": "Yavne",
-                "phone": "+33 973 52 12",
-                "phone2": "",
-                "description": "Some text",
-                "militaryHistory": "Army general",
-                "email": "fdsf@fdfs.gf"
+                "worksScope": "some scope",
+                "maxSalary": 5000,
+                "availability": "yes",
+                "days": 7,
+                "businessModel": "Some Model",
+                "relocation": true,
+                "ID": 155
               },
               "academic": [
                 {"placeholder": "Text text", "value": "Professor"},
-                {"placeholder": "Text text", "value": ""},
+                {"placeholder": "Text text", "value": "Nobody"},
                 {"placeholder": "Text text", "value": ""},
                 {"placeholder": "Text text", "value": ""}
               ],
@@ -481,51 +325,22 @@ What is created during add_new_candidate form filling and what need to be receiv
                 {"placeholder": "Text text", "value": ""},
                 {"placeholder": "Text text", "value": ""}
               ],
-              "coursesDiplomasNotes": "Nothing special",
-              "skills": [
+              "skillsNeeded": [
                 {"selected": "JS", "knowledge": "5"},
                 {"selected": "PHP", "knowledge": "8"},
                 {"selected": "", "knowledge": "1"},
                 {"selected": "", "knowledge": "1"}
               ],
-              "languages": [
+              "languagesNeeded": [
                 {"selected": "English", "knowledge": "8"},
                 {"selected": "French", "knowledge": "10"},
                 {"selected": "", "knowledge": "1"},
                 {"selected": "", "knowledge": "1"}
               ],
-              "usersJobsList": [
-                {
-                  "companyName": "Good company",
-                  "companyRole": "Worker",
-                  "period": {
-                    "since": "2011 0 1",
-                    "till": "2011 0 1"
-                  },
-                  "freeText": "Some free text"
-                },
-                {
-                  "companyName": "Bad company",
-                  "companyRole": "No one",
-                  "period": {
-                    "since": "2011 0 1",
-                    "till": "2011 0 1"
-                  },
-                  "freeText": "The same text as always"
-                }
-              ],
-              "job": {
-                "currentSalary": 5000,
-                "desiredSalary": 8000,
-                "campaignSource": "Something",
-                "desiredPosition": "Team lead",
-                "relocation": true,
-                "workScope": "JS PHP",
-                "availability": "yes",
-                "days": 15
-              },
+              "notes": "Some interesting comment",
+              "editMode": false,
               "active": true,
-              "usersCallsList": [
+              "jobsCallsList": [
                 {
                   "date": "2008 3 4",
                   "freeText": "Bla bla bla bla"
@@ -541,23 +356,23 @@ What is created during add_new_candidate form filling and what need to be receiv
               ]
             },
             {
-              "personal": {
-                "firstName": "Mary Elizabeth",
-                "lastName": "Kane",
-                "gender": "female",
-                "birthday": "2011 0 1",
-                "ID": 156,
+              "jobInformation": {
+                "company": "Rich one",
+                "title": "Rich of the rich",
+                "description": "Some text",
                 "country": "Israel",
                 "city": "Yavne",
-                "phone": "+33 973 52 12",
-                "phone2": "",
-                "description": "Some text",
-                "militaryHistory": "Army general",
-                "email": "fdsf@fdfs.gf"
+                "worksScope": "some scope",
+                "maxSalary": 5000,
+                "availability": "yes",
+                "days": 7,
+                "businessModel": "Some Model",
+                "relocation": true,
+                "ID": 156
               },
               "academic": [
                 {"placeholder": "Text text", "value": "Professor"},
-                {"placeholder": "Text text", "value": ""},
+                {"placeholder": "Text text", "value": "Nobody"},
                 {"placeholder": "Text text", "value": ""},
                 {"placeholder": "Text text", "value": ""}
               ],
@@ -567,51 +382,22 @@ What is created during add_new_candidate form filling and what need to be receiv
                 {"placeholder": "Text text", "value": ""},
                 {"placeholder": "Text text", "value": ""}
               ],
-              "coursesDiplomasNotes": "Nothing special",
-              "skills": [
+              "skillsNeeded": [
                 {"selected": "JS", "knowledge": "5"},
                 {"selected": "PHP", "knowledge": "8"},
                 {"selected": "", "knowledge": "1"},
                 {"selected": "", "knowledge": "1"}
               ],
-              "languages": [
+              "languagesNeeded": [
                 {"selected": "English", "knowledge": "8"},
                 {"selected": "French", "knowledge": "10"},
                 {"selected": "", "knowledge": "1"},
                 {"selected": "", "knowledge": "1"}
               ],
-              "usersJobsList": [
-                {
-                  "companyName": "Good company",
-                  "companyRole": "Worker",
-                  "period": {
-                    "since": "2011 0 1",
-                    "till": "2011 0 1"
-                  },
-                  "freeText": "Some free text"
-                },
-                {
-                  "companyName": "Bad company",
-                  "companyRole": "No one",
-                  "period": {
-                    "since": "2011 0 1",
-                    "till": "2011 0 1"
-                  },
-                  "freeText": "The same text as always"
-                }
-              ],
-              "job": {
-                "currentSalary": 5000,
-                "desiredSalary": 8000,
-                "campaignSource": "Something",
-                "desiredPosition": "Team lead",
-                "relocation": true,
-                "workScope": "JS PHP",
-                "availability": "yes",
-                "days": 15
-              },
+              "notes": "Some interesting comment",
+              "editMode": false,
               "active": true,
-              "usersCallsList": [
+              "jobsCallsList": [
                 {
                   "date": "2008 3 4",
                   "freeText": "Bla bla bla bla"
@@ -627,23 +413,23 @@ What is created during add_new_candidate form filling and what need to be receiv
               ]
             },
             {
-              "personal": {
-                "firstName": "Eric",
-                "lastName": "Brooks",
-                "gender": "male",
-                "birthday": "2011 0 1",
-                "ID": 157,
+              "jobInformation": {
+                "company": "Poor one",
+                "title": "Poor of the poor",
+                "description": "Some text",
                 "country": "Israel",
                 "city": "Yavne",
-                "phone": "+33 973 52 12",
-                "phone2": "",
-                "description": "Some text",
-                "militaryHistory": "Army general",
-                "email": "fdsf@fdfs.gf"
+                "worksScope": "some scope",
+                "maxSalary": 5000,
+                "availability": "yes",
+                "days": 7,
+                "businessModel": "Some Model",
+                "relocation": true,
+                "ID": 157
               },
               "academic": [
                 {"placeholder": "Text text", "value": "Professor"},
-                {"placeholder": "Text text", "value": ""},
+                {"placeholder": "Text text", "value": "Nobody"},
                 {"placeholder": "Text text", "value": ""},
                 {"placeholder": "Text text", "value": ""}
               ],
@@ -653,51 +439,22 @@ What is created during add_new_candidate form filling and what need to be receiv
                 {"placeholder": "Text text", "value": ""},
                 {"placeholder": "Text text", "value": ""}
               ],
-              "coursesDiplomasNotes": "Nothing special",
-              "skills": [
+              "skillsNeeded": [
                 {"selected": "JS", "knowledge": "5"},
                 {"selected": "PHP", "knowledge": "8"},
                 {"selected": "", "knowledge": "1"},
                 {"selected": "", "knowledge": "1"}
               ],
-              "languages": [
+              "languagesNeeded": [
                 {"selected": "English", "knowledge": "8"},
                 {"selected": "French", "knowledge": "10"},
                 {"selected": "", "knowledge": "1"},
                 {"selected": "", "knowledge": "1"}
               ],
-              "usersJobsList": [
-                {
-                  "companyName": "Good company",
-                  "companyRole": "Worker",
-                  "period": {
-                    "since": "2011 0 1",
-                    "till": "2011 0 1"
-                  },
-                  "freeText": "Some free text"
-                },
-                {
-                  "companyName": "Bad company",
-                  "companyRole": "No one",
-                  "period": {
-                    "since": "2011 0 1",
-                    "till": "2011 0 1"
-                  },
-                  "freeText": "The same text as always"
-                }
-              ],
-              "job": {
-                "currentSalary": 5000,
-                "desiredSalary": 8000,
-                "campaignSource": "Something",
-                "desiredPosition": "Team lead",
-                "relocation": true,
-                "workScope": "JS PHP",
-                "availability": "yes",
-                "days": 15
-              },
+              "notes": "Some interesting comment",
+              "editMode": false,
               "active": true,
-              "usersCallsList": [
+              "jobsCallsList": [
                 {
                   "date": "2008 3 4",
                   "freeText": "Bla bla bla bla"
@@ -713,23 +470,23 @@ What is created during add_new_candidate form filling and what need to be receiv
               ]
             },
             {
-              "personal": {
-                "firstName": "Steven Grant",
-                "lastName": "Rogers",
-                "gender": "male",
-                "birthday": "2011 0 1",
-                "ID": 158,
+              "jobInformation": {
+                "company": "Tramp man",
+                "title": "Tramps united",
+                "description": "Some text",
                 "country": "Israel",
                 "city": "Yavne",
-                "phone": "+33 973 52 12",
-                "phone2": "",
-                "description": "Some text",
-                "militaryHistory": "Army general",
-                "email": "fdsf@fdfs.gf"
+                "worksScope": "some scope",
+                "maxSalary": 5000,
+                "availability": "yes",
+                "days": 7,
+                "businessModel": "Some Model",
+                "relocation": true,
+                "ID": 158
               },
               "academic": [
                 {"placeholder": "Text text", "value": "Professor"},
-                {"placeholder": "Text text", "value": ""},
+                {"placeholder": "Text text", "value": "Nobody"},
                 {"placeholder": "Text text", "value": ""},
                 {"placeholder": "Text text", "value": ""}
               ],
@@ -739,51 +496,22 @@ What is created during add_new_candidate form filling and what need to be receiv
                 {"placeholder": "Text text", "value": ""},
                 {"placeholder": "Text text", "value": ""}
               ],
-              "coursesDiplomasNotes": "Nothing special",
-              "skills": [
+              "skillsNeeded": [
                 {"selected": "JS", "knowledge": "5"},
                 {"selected": "PHP", "knowledge": "8"},
                 {"selected": "", "knowledge": "1"},
                 {"selected": "", "knowledge": "1"}
               ],
-              "languages": [
+              "languagesNeeded": [
                 {"selected": "English", "knowledge": "8"},
                 {"selected": "French", "knowledge": "10"},
                 {"selected": "", "knowledge": "1"},
                 {"selected": "", "knowledge": "1"}
               ],
-              "usersJobsList": [
-                {
-                  "companyName": "Good company",
-                  "companyRole": "Worker",
-                  "period": {
-                    "since": "2011 0 1",
-                    "till": "2014 0 1"
-                  },
-                  "freeText": "Some free text"
-                },
-                {
-                  "companyName": "Bad company",
-                  "companyRole": "No one",
-                  "period": {
-                    "since": "2011 0 1",
-                    "till": "2014 0 1"
-                  },
-                  "freeText": "The same text as always"
-                }
-              ],
-              "job": {
-                "currentSalary": 5000,
-                "desiredSalary": 8000,
-                "campaignSource": "Something",
-                "desiredPosition": "Team lead",
-                "relocation": true,
-                "workScope": "JS PHP",
-                "availability": "yes",
-                "days": 15
-              },
+              "notes": "Some interesting comment",
+              "editMode": false,
               "active": true,
-              "usersCallsList": [
+              "jobsCallsList": [
                 {
                   "date": "2008 3 4",
                   "freeText": "Bla bla bla bla"
@@ -799,23 +527,23 @@ What is created during add_new_candidate form filling and what need to be receiv
               ]
             },
             {
-              "personal": {
-                "firstName": "Alexander 'Lex' Joseph",
-                "lastName": "Luthor",
-                "gender": "male",
-                "birthday": "2011 0 1",
-                "ID": 159,
+              "jobInformation": {
+                "company": "Obama man",
+                "title": "Obama is the president",
+                "description": "Some text",
                 "country": "Israel",
                 "city": "Yavne",
-                "phone": "+33 973 52 12",
-                "phone2": "",
-                "description": "Some text",
-                "militaryHistory": "Army general",
-                "email": "fdsf@fdfs.gf"
+                "worksScope": "some scope",
+                "maxSalary": 5000,
+                "availability": "yes",
+                "days": 7,
+                "businessModel": "Some Model",
+                "relocation": true,
+                "ID": 159
               },
               "academic": [
                 {"placeholder": "Text text", "value": "Professor"},
-                {"placeholder": "Text text", "value": ""},
+                {"placeholder": "Text text", "value": "Nobody"},
                 {"placeholder": "Text text", "value": ""},
                 {"placeholder": "Text text", "value": ""}
               ],
@@ -825,51 +553,22 @@ What is created during add_new_candidate form filling and what need to be receiv
                 {"placeholder": "Text text", "value": ""},
                 {"placeholder": "Text text", "value": ""}
               ],
-              "coursesDiplomasNotes": "Nothing special",
-              "skills": [
+              "skillsNeeded": [
                 {"selected": "JS", "knowledge": "5"},
                 {"selected": "PHP", "knowledge": "8"},
                 {"selected": "", "knowledge": "1"},
                 {"selected": "", "knowledge": "1"}
               ],
-              "languages": [
+              "languagesNeeded": [
                 {"selected": "English", "knowledge": "8"},
                 {"selected": "French", "knowledge": "10"},
                 {"selected": "", "knowledge": "1"},
                 {"selected": "", "knowledge": "1"}
               ],
-              "usersJobsList": [
-                {
-                  "companyName": "Good company",
-                  "companyRole": "Worker",
-                  "period": {
-                    "since": "2011 0 1",
-                    "till": "2014 0 1"
-                  },
-                  "freeText": "Some free text"
-                },
-                {
-                  "companyName": "Bad company",
-                  "companyRole": "No one",
-                  "period": {
-                    "since": "2011 0 1",
-                    "till": "2014 0 1"
-                  },
-                  "freeText": "The same text as always"
-                }
-              ],
-              "job": {
-                "currentSalary": 5000,
-                "desiredSalary": 8000,
-                "campaignSource": "Something",
-                "desiredPosition": "Team lead",
-                "relocation": true,
-                "workScope": "JS PHP",
-                "availability": "yes",
-                "days": 15
-              },
+              "notes": "Some interesting comment",
+              "editMode": false,
               "active": true,
-              "usersCallsList": [
+              "jobsCallsList": [
                 {
                   "date": "2008 3 4",
                   "freeText": "Bla bla bla bla"
@@ -885,23 +584,23 @@ What is created during add_new_candidate form filling and what need to be receiv
               ]
             },
             {
-              "personal": {
-                "firstName": "Rachel Anne",
-                "lastName": "Summers",
-                "gender": "female",
-                "birthday": "2011 0 1",
-                "ID": 160,
+              "jobInformation": {
+                "company": "Radiation protection",
+                "title": "We will protect you tomorrow",
+                "description": "Some text",
                 "country": "Israel",
                 "city": "Yavne",
-                "phone": "+33 973 52 12",
-                "phone2": "",
-                "description": "Some text",
-                "militaryHistory": "Army general",
-                "email": "fdsf@fdfs.gf"
+                "worksScope": "some scope",
+                "maxSalary": 5000,
+                "availability": "yes",
+                "days": 7,
+                "businessModel": "Some Model",
+                "relocation": true,
+                "ID": 160
               },
               "academic": [
                 {"placeholder": "Text text", "value": "Professor"},
-                {"placeholder": "Text text", "value": ""},
+                {"placeholder": "Text text", "value": "Nobody"},
                 {"placeholder": "Text text", "value": ""},
                 {"placeholder": "Text text", "value": ""}
               ],
@@ -911,51 +610,22 @@ What is created during add_new_candidate form filling and what need to be receiv
                 {"placeholder": "Text text", "value": ""},
                 {"placeholder": "Text text", "value": ""}
               ],
-              "coursesDiplomasNotes": "Nothing special",
-              "skills": [
+              "skillsNeeded": [
                 {"selected": "JS", "knowledge": "5"},
                 {"selected": "PHP", "knowledge": "8"},
                 {"selected": "", "knowledge": "1"},
                 {"selected": "", "knowledge": "1"}
               ],
-              "languages": [
+              "languagesNeeded": [
                 {"selected": "English", "knowledge": "8"},
                 {"selected": "French", "knowledge": "10"},
                 {"selected": "", "knowledge": "1"},
                 {"selected": "", "knowledge": "1"}
               ],
-              "usersJobsList": [
-                {
-                  "companyName": "Good company",
-                  "companyRole": "Worker",
-                  "period": {
-                    "since": "2011 0 1",
-                    "till": "2014 0 1"
-                  },
-                  "freeText": "Some free text"
-                },
-                {
-                  "companyName": "Bad company",
-                  "companyRole": "No one",
-                  "period": {
-                    "since": "2011 0 1",
-                    "till": "2014 0 1"
-                  },
-                  "freeText": "The same text as always"
-                }
-              ],
-              "job": {
-                "currentSalary": 5000,
-                "desiredSalary": 8000,
-                "campaignSource": "Something",
-                "desiredPosition": "Team lead",
-                "relocation": true,
-                "workScope": "JS PHP",
-                "availability": "yes",
-                "days": 15
-              },
+              "notes": "Some interesting comment",
+              "editMode": false,
               "active": true,
-              "usersCallsList": [
+              "jobsCallsList": [
                 {
                   "date": "2008 3 4",
                   "freeText": "Bla bla bla bla"
@@ -971,23 +641,23 @@ What is created during add_new_candidate form filling and what need to be receiv
               ]
             },
             {
-              "personal": {
-                "firstName": "Oswald Chesterfield",
-                "lastName": "Cobblepot",
-                "gender": "male",
-                "birthday": "2011 0 1",
-                "ID": 161,
+              "jobInformation": {
+                "company": "Red book",
+                "title": "Protect the beast",
+                "description": "Some text",
                 "country": "Israel",
                 "city": "Yavne",
-                "phone": "+33 973 52 12",
-                "phone2": "",
-                "description": "Some text",
-                "militaryHistory": "Army general",
-                "email": "fdsf@fdfs.gf"
+                "worksScope": "some scope",
+                "maxSalary": 5000,
+                "availability": "yes",
+                "days": 7,
+                "businessModel": "Some Model",
+                "relocation": true,
+                "ID": 161
               },
               "academic": [
                 {"placeholder": "Text text", "value": "Professor"},
-                {"placeholder": "Text text", "value": ""},
+                {"placeholder": "Text text", "value": "Nobody"},
                 {"placeholder": "Text text", "value": ""},
                 {"placeholder": "Text text", "value": ""}
               ],
@@ -997,51 +667,22 @@ What is created during add_new_candidate form filling and what need to be receiv
                 {"placeholder": "Text text", "value": ""},
                 {"placeholder": "Text text", "value": ""}
               ],
-              "coursesDiplomasNotes": "Nothing special",
-              "skills": [
+              "skillsNeeded": [
                 {"selected": "JS", "knowledge": "5"},
                 {"selected": "PHP", "knowledge": "8"},
                 {"selected": "", "knowledge": "1"},
                 {"selected": "", "knowledge": "1"}
               ],
-              "languages": [
+              "languagesNeeded": [
                 {"selected": "English", "knowledge": "8"},
                 {"selected": "French", "knowledge": "10"},
                 {"selected": "", "knowledge": "1"},
                 {"selected": "", "knowledge": "1"}
               ],
-              "usersJobsList": [
-                {
-                  "companyName": "Good company",
-                  "companyRole": "Worker",
-                  "period": {
-                    "since": "2011 0 1",
-                    "till": "2014 0 1"
-                  },
-                  "freeText": "Some free text"
-                },
-                {
-                  "companyName": "Bad company",
-                  "companyRole": "No one",
-                  "period": {
-                    "since": "2011 0 1",
-                    "till": "2014 0 1"
-                  },
-                  "freeText": "The same text as always"
-                }
-              ],
-              "job": {
-                "currentSalary": 5000,
-                "desiredSalary": 8000,
-                "campaignSource": "Something",
-                "desiredPosition": "Team lead",
-                "relocation": true,
-                "workScope": "JS PHP",
-                "availability": "yes",
-                "days": 15
-              },
+              "notes": "Some interesting comment",
+              "editMode": false,
               "active": true,
-              "usersCallsList": [
+              "jobsCallsList": [
                 {
                   "date": "2008 3 4",
                   "freeText": "Bla bla bla bla"
@@ -1057,23 +698,23 @@ What is created during add_new_candidate form filling and what need to be receiv
               ]
             },
             {
-              "personal": {
-                "firstName": "Anna",
-                "lastName": "Marie",
-                "gender": "female",
-                "birthday": "2011 0 1",
-                "ID": 162,
+              "jobInformation": {
+                "company": "The Last",
+                "title": "Last chance",
+                "description": "Some text",
                 "country": "Israel",
                 "city": "Yavne",
-                "phone": "+33 973 52 12",
-                "phone2": "",
-                "description": "Some text",
-                "militaryHistory": "Army general",
-                "email": "fdsf@fdfs.gf"
+                "worksScope": "some scope",
+                "maxSalary": 5000,
+                "availability": "yes",
+                "days": 7,
+                "businessModel": "Some Model",
+                "relocation": true,
+                "ID": 162
               },
               "academic": [
                 {"placeholder": "Text text", "value": "Professor"},
-                {"placeholder": "Text text", "value": ""},
+                {"placeholder": "Text text", "value": "Nobody"},
                 {"placeholder": "Text text", "value": ""},
                 {"placeholder": "Text text", "value": ""}
               ],
@@ -1083,51 +724,22 @@ What is created during add_new_candidate form filling and what need to be receiv
                 {"placeholder": "Text text", "value": ""},
                 {"placeholder": "Text text", "value": ""}
               ],
-              "coursesDiplomasNotes": "Nothing special",
-              "skills": [
+              "skillsNeeded": [
                 {"selected": "JS", "knowledge": "5"},
                 {"selected": "PHP", "knowledge": "8"},
                 {"selected": "", "knowledge": "1"},
                 {"selected": "", "knowledge": "1"}
               ],
-              "languages": [
+              "languagesNeeded": [
                 {"selected": "English", "knowledge": "8"},
                 {"selected": "French", "knowledge": "10"},
                 {"selected": "", "knowledge": "1"},
                 {"selected": "", "knowledge": "1"}
               ],
-              "usersJobsList": [
-                {
-                  "companyName": "Good company",
-                  "companyRole": "Worker",
-                  "period": {
-                    "since": "2011 0 1",
-                    "till": "2014 0 1"
-                  },
-                  "freeText": "Some free text"
-                },
-                {
-                  "companyName": "Bad company",
-                  "companyRole": "No one",
-                  "period": {
-                    "since": "2011 0 1",
-                    "till": "2014 0 1"
-                  },
-                  "freeText": "The same text as always"
-                }
-              ],
-              "job": {
-                "currentSalary": 5000,
-                "desiredSalary": 8000,
-                "campaignSource": "Something",
-                "desiredPosition": "Team lead",
-                "relocation": true,
-                "workScope": "JS PHP",
-                "availability": "yes",
-                "days": 15
-              },
+              "notes": "Some interesting comment",
+              "editMode": false,
               "active": true,
-              "usersCallsList": [
+              "jobsCallsList": [
                 {
                   "date": "2008 3 4",
                   "freeText": "Bla bla bla bla"
@@ -1142,194 +754,6 @@ What is created during add_new_candidate form filling and what need to be receiv
                 }
               ]
             }
+        
           ]
         }
-
-### Create a New Candidate [POST]
-
-You may create your own candidate using this action. It takes a JSON
-object containing new candidate data.
-
-+ Request (application/json)
-
-            {
-              "personal": {
-                "firstName": "Oliver",
-                "lastName": "Twister",
-                "gender": "male",
-                "birthday": "2011 0 1",
-                "ID": 163,
-                "country": "Israel",
-                "city": "Yavne",
-                "phone": "+33 973 52 12",
-                "phone2": "",
-                "description": "Some text",
-                "militaryHistory": "Army general",
-                "email": "fdsf@fdfs.gf"
-              },
-              "academic": [
-                {"placeholder": "Text text", "value": "Professor"},
-                {"placeholder": "Text text", "value": ""},
-                {"placeholder": "Text text", "value": ""},
-                {"placeholder": "Text text", "value": ""}
-              ],
-              "coursesDiplomas": [
-                {"placeholder": "Text text", "value": "Diploma of nothing"},
-                {"placeholder": "Text text", "value": "Diploma of everything"},
-                {"placeholder": "Text text", "value": ""},
-                {"placeholder": "Text text", "value": ""}
-              ],
-              "coursesDiplomasNotes": "Nothing special",
-              "skills": [
-                {"selected": "JS", "knowledge": "5"},
-                {"selected": "PHP", "knowledge": "8"},
-                {"selected": "", "knowledge": "1"},
-                {"selected": "", "knowledge": "1"}
-              ],
-              "languages": [
-                {"selected": "English", "knowledge": "8"},
-                {"selected": "French", "knowledge": "10"},
-                {"selected": "", "knowledge": "1"},
-                {"selected": "", "knowledge": "1"}
-              ],
-              "usersJobsList": [
-                {
-                  "companyName": "Good company",
-                  "companyRole": "Worker",
-                  "period": {
-                    "since": "2011 0 1",
-                    "till": "2014 0 1"
-                  },
-                  "freeText": "Some free text"
-                },
-                {
-                  "companyName": "Bad company",
-                  "companyRole": "No one",
-                  "period": {
-                    "since": "2011 0 1",
-                    "till": "2014 0 1"
-                  },
-                  "freeText": "The same text as always"
-                }
-              ],
-              "job": {
-                "currentSalary": 5000,
-                "desiredSalary": 8000,
-                "campaignSource": "Something",
-                "desiredPosition": "Team lead",
-                "relocation": true,
-                "workScope": "JS PHP",
-                "availability": "yes",
-                "days": 15
-              },
-              "active": true,
-              "usersCallsList": [
-                {
-                  "date": "2008 3 4",
-                  "freeText": "Bla bla bla bla"
-                },
-                {
-                  "date": "2009 4 5",
-                  "freeText": "Olo lo lo lo lo"
-                },
-                {
-                  "date": "2010 5 6",
-                  "freeText": "Tra ta ta ta ta ta"
-                }
-              ]
-            }
-
-+ Response 201 (application/json)
-
-    + Headers
-
-            Location: /candidates/2
-
-    + Body
-
-            {
-              "personal": {
-                "firstName": "Oliver",
-                "lastName": "Twister",
-                "gender": "male",
-                "birthday": "2011 0 1",
-                "ID": 163,
-                "country": "Israel",
-                "city": "Yavne",
-                "phone": "+33 973 52 12",
-                "phone2": "",
-                "description": "Some text",
-                "militaryHistory": "Army general",
-                "email": "fdsf@fdfs.gf"
-              },
-              "academic": [
-                {"placeholder": "Text text", "value": "Professor"},
-                {"placeholder": "Text text", "value": ""},
-                {"placeholder": "Text text", "value": ""},
-                {"placeholder": "Text text", "value": ""}
-              ],
-              "coursesDiplomas": [
-                {"placeholder": "Text text", "value": "Diploma of nothing"},
-                {"placeholder": "Text text", "value": "Diploma of everything"},
-                {"placeholder": "Text text", "value": ""},
-                {"placeholder": "Text text", "value": ""}
-              ],
-              "coursesDiplomasNotes": "Nothing special",
-              "skills": [
-                {"selected": "JS", "knowledge": "5"},
-                {"selected": "PHP", "knowledge": "8"},
-                {"selected": "", "knowledge": "1"},
-                {"selected": "", "knowledge": "1"}
-              ],
-              "languages": [
-                {"selected": "English", "knowledge": "8"},
-                {"selected": "French", "knowledge": "10"},
-                {"selected": "", "knowledge": "1"},
-                {"selected": "", "knowledge": "1"}
-              ],
-              "usersJobsList": [
-                {
-                  "companyName": "Good company",
-                  "companyRole": "Worker",
-                  "period": {
-                    "since": "2011 0 1",
-                    "till": "2014 0 1"
-                  },
-                  "freeText": "Some free text"
-                },
-                {
-                  "companyName": "Bad company",
-                  "companyRole": "No one",
-                  "period": {
-                    "since": "2011 0 1",
-                    "till": "2014 0 1"
-                  },
-                  "freeText": "The same text as always"
-                }
-              ],
-              "job": {
-                "currentSalary": 5000,
-                "desiredSalary": 8000,
-                "campaignSource": "Something",
-                "desiredPosition": "Team lead",
-                "relocation": true,
-                "workScope": "JS PHP",
-                "availability": "yes",
-                "days": 15
-              },
-              "active": true,
-              "usersCallsList": [
-                {
-                  "date": "2008 3 4",
-                  "freeText": "Bla bla bla bla"
-                },
-                {
-                  "date": "2009 4 5",
-                  "freeText": "Olo lo lo lo lo"
-                },
-                {
-                  "date": "2010 5 6",
-                  "freeText": "Tra ta ta ta ta ta"
-                }
-              ]
-            }
