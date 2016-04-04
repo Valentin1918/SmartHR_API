@@ -1,0 +1,1335 @@
+FORMAT: 1A
+HOST: http://polls.apiblueprint.org/
+
+# add-edit-candidate
+
+What is created during add_new_candidate form filling and what need to be received to edit the candidate data.
+
+## Candidates Collection [/candidates]
+
+### List All Candidates [GET]
+
++ Response 200 (application/json)
+
+        {
+          "candidates": [
+            {
+              "personal": {
+                "firstName": "Bruce",
+                "lastName": "Wayne",
+                "gender": "male",
+                "birthday": "2011 0 1",
+                "ID": 150,
+                "country": "Israel",
+                "city": "Yavne",
+                "phone": "+33 973 52 12",
+                "phone2": "",
+                "description": "Some text",
+                "militaryHistory": "Army general",
+                "email": "fdsf@fdfs.gf"
+              },
+              "academic": [
+                {"placeholder": "Text text", "value": "Professor"},
+                {"placeholder": "Text text", "value": ""},
+                {"placeholder": "Text text", "value": ""},
+                {"placeholder": "Text text", "value": ""}
+              ],
+              "coursesDiplomas": [
+                {"placeholder": "Text text", "value": "Diploma of nothing"},
+                {"placeholder": "Text text", "value": "Diploma of everything"},
+                {"placeholder": "Text text", "value": ""},
+                {"placeholder": "Text text", "value": ""}
+              ],
+              "coursesDiplomasNotes": "Nothing special",
+              "skills": [
+                {"selected": "JS", "knowledge": "5"},
+                {"selected": "PHP", "knowledge": "8"},
+                {"selected": "", "knowledge": "1"},
+                {"selected": "", "knowledge": "1"}
+              ],
+              "languages": [
+                {"selected": "English", "knowledge": "8"},
+                {"selected": "French", "knowledge": "10"},
+                {"selected": "", "knowledge": "1"},
+                {"selected": "", "knowledge": "1"}
+              ],
+              "usersJobsList": [
+                {
+                  "companyName": "Good company",
+                  "companyRole": "Worker",
+                  "period": {
+                    "since": "2011 0 1",
+                    "till": "2014 0 1"
+                  },
+                  "freeText": "Some free text"
+                },
+                {
+                  "companyName": "Bad company",
+                  "companyShortName": "Worst company",
+                  "companyRole": "No one",
+                  "period": {
+                    "since": "2011 0 1",
+                    "till": "2015 0 1"
+                  },
+                  "freeText": "The same text as always"
+                },
+                {
+                  "companyName": "Long company",
+                  "companyShortName": "The longest company name in the world",
+                  "companyRole": "No one",
+                  "period": {
+                    "since": "2011 0 1",
+                    "till": "2015 0 1"
+                  },
+                  "freeText": "The same text as always"
+                }
+              ],
+              "job": {
+                "currentSalary": 5000,
+                "desiredSalary": 8000,
+                "campaignSource": "Something",
+                "desiredPosition": "Team lead",
+                "relocation": true,
+                "workScope": "JS PHP",
+                "availability": "yes",
+                "days": 15
+              },
+              "active": true,
+              "usersCallsList": [
+                {
+                  "date": "2008 3 4",
+                  "freeText": "Bla bla bla bla"
+                },
+                {
+                  "date": "2009 4 5",
+                  "freeText": "Olo lo lo lo lo"
+                },
+                {
+                  "date": "2010 5 6",
+                  "freeText": "Tra ta ta ta ta ta"
+                }
+              ]
+            },
+            {
+              "personal": {
+                "firstName": "Clark",
+                "lastName": "Kent",
+                "gender": "male",
+                "birthday": "2013 3 1",
+                "ID": 151,
+                "country": "Israel",
+                "city": "Yavne",
+                "phone": "+33 973 52 12",
+                "phone2": "",
+                "description": "Some text",
+                "militaryHistory": "Army general",
+                "email": "fdsf@fdfs.gf"
+              },
+              "academic": [
+                {"placeholder": "Text text", "value": "Professor"},
+                {"placeholder": "Text text", "value": ""},
+                {"placeholder": "Text text", "value": ""},
+                {"placeholder": "Text text", "value": ""}
+              ],
+              "coursesDiplomas": [
+                {"placeholder": "Text text", "value": "Diploma of nothing"},
+                {"placeholder": "Text text", "value": "Diploma of everything"},
+                {"placeholder": "Text text", "value": ""},
+                {"placeholder": "Text text", "value": ""}
+              ],
+              "coursesDiplomasNotes": "Nothing special",
+              "skills": [
+                {"selected": "JS", "knowledge": "5"},
+                {"selected": "PHP", "knowledge": "8"},
+                {"selected": "", "knowledge": "1"},
+                {"selected": "", "knowledge": "1"}
+              ],
+              "languages": [
+                {"selected": "English", "knowledge": "8"},
+                {"selected": "French", "knowledge": "10"},
+                {"selected": "", "knowledge": "1"},
+                {"selected": "", "knowledge": "1"}
+              ],
+              "usersJobsList": [
+                {
+                  "companyName": "Good company",
+                  "companyRole": "Worker",
+                  "period": {
+                    "since": "2011 0 1",
+                    "till": "2016 0 1"
+                  },
+                  "freeText": "Some free text"
+                },
+                {
+                  "companyName": "Bad company",
+                  "companyRole": "No one",
+                  "period": {
+                    "since": "2011 0 1",
+                    "till": "2014 0 1"
+                  },
+                  "freeText": "The same text as always"
+                }
+              ],
+              "job": {
+                "currentSalary": 5000,
+                "desiredSalary": 8000,
+                "campaignSource": "Something",
+                "desiredPosition": "Team lead",
+                "relocation": true,
+                "workScope": "JS PHP",
+                "availability": "yes",
+                "days": 15
+              },
+              "active": true,
+              "usersCallsList": [
+                {
+                  "date": "2008 3 4",
+                  "freeText": "Bla bla bla bla"
+                },
+                {
+                  "date": "2009 4 5",
+                  "freeText": "Olo lo lo lo lo"
+                },
+                {
+                  "date": "2010 5 6",
+                  "freeText": "Tra ta ta ta ta ta"
+                }
+              ]
+            },
+            {
+              "personal": {
+                "firstName": "Selina",
+                "lastName": "Kyle",
+                "gender": "female",
+                "birthday": "1980 0 1",
+                "ID": 152,
+                "country": "Israel",
+                "city": "Yavne",
+                "phone": "+33 973 52 12",
+                "phone2": "",
+                "description": "Some text",
+                "militaryHistory": "Army general",
+                "email": "fdsf@fdfs.gf"
+              },
+              "academic": [
+                {"placeholder": "Text text", "value": "Professor"},
+                {"placeholder": "Text text", "value": ""},
+                {"placeholder": "Text text", "value": ""},
+                {"placeholder": "Text text", "value": ""}
+              ],
+              "coursesDiplomas": [
+                {"placeholder": "Text text", "value": "Diploma of nothing"},
+                {"placeholder": "Text text", "value": "Diploma of everything"},
+                {"placeholder": "Text text", "value": ""},
+                {"placeholder": "Text text", "value": ""}
+              ],
+              "coursesDiplomasNotes": "Nothing special",
+              "skills": [
+                {"selected": "JS", "knowledge": "5"},
+                {"selected": "PHP", "knowledge": "8"},
+                {"selected": "", "knowledge": "1"},
+                {"selected": "", "knowledge": "1"}
+              ],
+              "languages": [
+                {"selected": "English", "knowledge": "8"},
+                {"selected": "French", "knowledge": "10"},
+                {"selected": "", "knowledge": "1"},
+                {"selected": "", "knowledge": "1"}
+              ],
+              "usersJobsList": [
+                {
+                  "companyName": "Good company",
+                  "companyRole": "Worker",
+                  "period": {
+                    "since": "2011 0 1",
+                    "till": "2013 0 1"
+                  },
+                  "freeText": "Some free text"
+                },
+                {
+                  "companyName": "Bad company",
+                  "companyRole": "No one",
+                  "period": {
+                    "since": "2011 0 1",
+                    "till": "2014 0 1"
+                  },
+                  "freeText": "The same text as always"
+                }
+              ],
+              "job": {
+                "currentSalary": 5000,
+                "desiredSalary": 8000,
+                "campaignSource": "Something",
+                "desiredPosition": "Team lead",
+                "relocation": true,
+                "workScope": "JS PHP",
+                "availability": "yes",
+                "days": 15
+              },
+              "active": true,
+              "usersCallsList": [
+                {
+                  "date": "2008 3 4",
+                  "freeText": "Bla bla bla bla"
+                },
+                {
+                  "date": "2009 4 5",
+                  "freeText": "Olo lo lo lo lo"
+                },
+                {
+                  "date": "2010 5 6",
+                  "freeText": "Tra ta ta ta ta ta"
+                }
+              ]
+            },
+            {
+              "personal": {
+                "firstName": "Peter Benjamin",
+                "lastName": "Parker",
+                "gender": "male",
+                "birthday": "1988 4 1",
+                "ID": 153,
+                "country": "Israel",
+                "city": "Yavne",
+                "phone": "+33 973 52 12",
+                "phone2": "",
+                "description": "Some text",
+                "militaryHistory": "Army general",
+                "email": "fdsf@fdfs.gf"
+              },
+              "academic": [
+                {"placeholder": "Text text", "value": "Professor"},
+                {"placeholder": "Text text", "value": ""},
+                {"placeholder": "Text text", "value": ""},
+                {"placeholder": "Text text", "value": ""}
+              ],
+              "coursesDiplomas": [
+                {"placeholder": "Text text", "value": "Diploma of nothing"},
+                {"placeholder": "Text text", "value": "Diploma of everything"},
+                {"placeholder": "Text text", "value": ""},
+                {"placeholder": "Text text", "value": ""}
+              ],
+              "coursesDiplomasNotes": "Nothing special",
+              "skills": [
+                {"selected": "JS", "knowledge": "5"},
+                {"selected": "PHP", "knowledge": "8"},
+                {"selected": "", "knowledge": "1"},
+                {"selected": "", "knowledge": "1"}
+              ],
+              "languages": [
+                {"selected": "English", "knowledge": "8"},
+                {"selected": "French", "knowledge": "10"},
+                {"selected": "", "knowledge": "1"},
+                {"selected": "", "knowledge": "1"}
+              ],
+              "usersJobsList": [
+                {
+                  "companyName": "Good company",
+                  "companyRole": "Worker",
+                  "period": {
+                    "since": "2002 0 1",
+                    "till": "2005 0 1"
+                  },
+                  "freeText": "Some free text"
+                },
+                {
+                  "companyName": "Bad company",
+                  "companyRole": "No one",
+                  "period": {
+                    "since": "2008 0 1",
+                    "till": "2011 0 1"
+                  },
+                  "freeText": "The same text as always"
+                }
+              ],
+              "job": {
+                "currentSalary": 5000,
+                "desiredSalary": 8000,
+                "campaignSource": "Something",
+                "desiredPosition": "Team lead",
+                "relocation": true,
+                "workScope": "JS PHP",
+                "availability": "yes",
+                "days": 15
+              },
+              "active": true,
+              "usersCallsList": [
+                {
+                  "date": "2008 3 4",
+                  "freeText": "Bla bla bla bla"
+                },
+                {
+                  "date": "2009 4 5",
+                  "freeText": "Olo lo lo lo lo"
+                },
+                {
+                  "date": "2010 5 6",
+                  "freeText": "Tra ta ta ta ta ta"
+                }
+              ]
+            },
+            {
+              "personal": {
+                "firstName": "Sean",
+                "lastName": "Cassidy",
+                "gender": "male",
+                "birthday": "1976 0 1",
+                "ID": 154,
+                "country": "Israel",
+                "city": "Yavne",
+                "phone": "+33 973 52 12",
+                "phone2": "",
+                "description": "Some text",
+                "militaryHistory": "Army general",
+                "email": "fdsf@fdfs.gf"
+              },
+              "academic": [
+                {"placeholder": "Text text", "value": "Professor"},
+                {"placeholder": "Text text", "value": ""},
+                {"placeholder": "Text text", "value": ""},
+                {"placeholder": "Text text", "value": ""}
+              ],
+              "coursesDiplomas": [
+                {"placeholder": "Text text", "value": "Diploma of nothing"},
+                {"placeholder": "Text text", "value": "Diploma of everything"},
+                {"placeholder": "Text text", "value": ""},
+                {"placeholder": "Text text", "value": ""}
+              ],
+              "coursesDiplomasNotes": "Nothing special",
+              "skills": [
+                {"selected": "JS", "knowledge": "5"},
+                {"selected": "PHP", "knowledge": "8"},
+                {"selected": "", "knowledge": "1"},
+                {"selected": "", "knowledge": "1"}
+              ],
+              "languages": [
+                {"selected": "English", "knowledge": "8"},
+                {"selected": "French", "knowledge": "10"},
+                {"selected": "", "knowledge": "1"},
+                {"selected": "", "knowledge": "1"}
+              ],
+              "usersJobsList": [
+                {
+                  "companyName": "Good company",
+                  "companyRole": "Worker",
+                  "period": {
+                    "since": "2011 0 1",
+                    "till": "2011 0 1"
+                  },
+                  "freeText": "Some free text"
+                },
+                {
+                  "companyName": "Bad company",
+                  "companyRole": "No one",
+                  "period": {
+                    "since": "2011 0 1",
+                    "till": "2011 0 1"
+                  },
+                  "freeText": "The same text as always"
+                }
+              ],
+              "job": {
+                "currentSalary": 5000,
+                "desiredSalary": 8000,
+                "campaignSource": "Something",
+                "desiredPosition": "Team lead",
+                "relocation": true,
+                "workScope": "JS PHP",
+                "availability": "yes",
+                "days": 15
+              },
+              "active": true,
+              "usersCallsList": [
+                {
+                  "date": "2008 3 4",
+                  "freeText": "Bla bla bla bla"
+                },
+                {
+                  "date": "2009 4 5",
+                  "freeText": "Olo lo lo lo lo"
+                },
+                {
+                  "date": "2010 5 6",
+                  "freeText": "Tra ta ta ta ta ta"
+                }
+              ]
+            },
+            {
+              "personal": {
+                "firstName": "Tanya",
+                "lastName": "Sealy",
+                "gender": "female",
+                "birthday": "2011 0 1",
+                "ID": 155,
+                "country": "Israel",
+                "city": "Yavne",
+                "phone": "+33 973 52 12",
+                "phone2": "",
+                "description": "Some text",
+                "militaryHistory": "Army general",
+                "email": "fdsf@fdfs.gf"
+              },
+              "academic": [
+                {"placeholder": "Text text", "value": "Professor"},
+                {"placeholder": "Text text", "value": ""},
+                {"placeholder": "Text text", "value": ""},
+                {"placeholder": "Text text", "value": ""}
+              ],
+              "coursesDiplomas": [
+                {"placeholder": "Text text", "value": "Diploma of nothing"},
+                {"placeholder": "Text text", "value": "Diploma of everything"},
+                {"placeholder": "Text text", "value": ""},
+                {"placeholder": "Text text", "value": ""}
+              ],
+              "coursesDiplomasNotes": "Nothing special",
+              "skills": [
+                {"selected": "JS", "knowledge": "5"},
+                {"selected": "PHP", "knowledge": "8"},
+                {"selected": "", "knowledge": "1"},
+                {"selected": "", "knowledge": "1"}
+              ],
+              "languages": [
+                {"selected": "English", "knowledge": "8"},
+                {"selected": "French", "knowledge": "10"},
+                {"selected": "", "knowledge": "1"},
+                {"selected": "", "knowledge": "1"}
+              ],
+              "usersJobsList": [
+                {
+                  "companyName": "Good company",
+                  "companyRole": "Worker",
+                  "period": {
+                    "since": "2011 0 1",
+                    "till": "2011 0 1"
+                  },
+                  "freeText": "Some free text"
+                },
+                {
+                  "companyName": "Bad company",
+                  "companyRole": "No one",
+                  "period": {
+                    "since": "2011 0 1",
+                    "till": "2011 0 1"
+                  },
+                  "freeText": "The same text as always"
+                }
+              ],
+              "job": {
+                "currentSalary": 5000,
+                "desiredSalary": 8000,
+                "campaignSource": "Something",
+                "desiredPosition": "Team lead",
+                "relocation": true,
+                "workScope": "JS PHP",
+                "availability": "yes",
+                "days": 15
+              },
+              "active": true,
+              "usersCallsList": [
+                {
+                  "date": "2008 3 4",
+                  "freeText": "Bla bla bla bla"
+                },
+                {
+                  "date": "2009 4 5",
+                  "freeText": "Olo lo lo lo lo"
+                },
+                {
+                  "date": "2010 5 6",
+                  "freeText": "Tra ta ta ta ta ta"
+                }
+              ]
+            },
+            {
+              "personal": {
+                "firstName": "Mary Elizabeth",
+                "lastName": "Kane",
+                "gender": "female",
+                "birthday": "2011 0 1",
+                "ID": 156,
+                "country": "Israel",
+                "city": "Yavne",
+                "phone": "+33 973 52 12",
+                "phone2": "",
+                "description": "Some text",
+                "militaryHistory": "Army general",
+                "email": "fdsf@fdfs.gf"
+              },
+              "academic": [
+                {"placeholder": "Text text", "value": "Professor"},
+                {"placeholder": "Text text", "value": ""},
+                {"placeholder": "Text text", "value": ""},
+                {"placeholder": "Text text", "value": ""}
+              ],
+              "coursesDiplomas": [
+                {"placeholder": "Text text", "value": "Diploma of nothing"},
+                {"placeholder": "Text text", "value": "Diploma of everything"},
+                {"placeholder": "Text text", "value": ""},
+                {"placeholder": "Text text", "value": ""}
+              ],
+              "coursesDiplomasNotes": "Nothing special",
+              "skills": [
+                {"selected": "JS", "knowledge": "5"},
+                {"selected": "PHP", "knowledge": "8"},
+                {"selected": "", "knowledge": "1"},
+                {"selected": "", "knowledge": "1"}
+              ],
+              "languages": [
+                {"selected": "English", "knowledge": "8"},
+                {"selected": "French", "knowledge": "10"},
+                {"selected": "", "knowledge": "1"},
+                {"selected": "", "knowledge": "1"}
+              ],
+              "usersJobsList": [
+                {
+                  "companyName": "Good company",
+                  "companyRole": "Worker",
+                  "period": {
+                    "since": "2011 0 1",
+                    "till": "2011 0 1"
+                  },
+                  "freeText": "Some free text"
+                },
+                {
+                  "companyName": "Bad company",
+                  "companyRole": "No one",
+                  "period": {
+                    "since": "2011 0 1",
+                    "till": "2011 0 1"
+                  },
+                  "freeText": "The same text as always"
+                }
+              ],
+              "job": {
+                "currentSalary": 5000,
+                "desiredSalary": 8000,
+                "campaignSource": "Something",
+                "desiredPosition": "Team lead",
+                "relocation": true,
+                "workScope": "JS PHP",
+                "availability": "yes",
+                "days": 15
+              },
+              "active": true,
+              "usersCallsList": [
+                {
+                  "date": "2008 3 4",
+                  "freeText": "Bla bla bla bla"
+                },
+                {
+                  "date": "2009 4 5",
+                  "freeText": "Olo lo lo lo lo"
+                },
+                {
+                  "date": "2010 5 6",
+                  "freeText": "Tra ta ta ta ta ta"
+                }
+              ]
+            },
+            {
+              "personal": {
+                "firstName": "Eric",
+                "lastName": "Brooks",
+                "gender": "male",
+                "birthday": "2011 0 1",
+                "ID": 157,
+                "country": "Israel",
+                "city": "Yavne",
+                "phone": "+33 973 52 12",
+                "phone2": "",
+                "description": "Some text",
+                "militaryHistory": "Army general",
+                "email": "fdsf@fdfs.gf"
+              },
+              "academic": [
+                {"placeholder": "Text text", "value": "Professor"},
+                {"placeholder": "Text text", "value": ""},
+                {"placeholder": "Text text", "value": ""},
+                {"placeholder": "Text text", "value": ""}
+              ],
+              "coursesDiplomas": [
+                {"placeholder": "Text text", "value": "Diploma of nothing"},
+                {"placeholder": "Text text", "value": "Diploma of everything"},
+                {"placeholder": "Text text", "value": ""},
+                {"placeholder": "Text text", "value": ""}
+              ],
+              "coursesDiplomasNotes": "Nothing special",
+              "skills": [
+                {"selected": "JS", "knowledge": "5"},
+                {"selected": "PHP", "knowledge": "8"},
+                {"selected": "", "knowledge": "1"},
+                {"selected": "", "knowledge": "1"}
+              ],
+              "languages": [
+                {"selected": "English", "knowledge": "8"},
+                {"selected": "French", "knowledge": "10"},
+                {"selected": "", "knowledge": "1"},
+                {"selected": "", "knowledge": "1"}
+              ],
+              "usersJobsList": [
+                {
+                  "companyName": "Good company",
+                  "companyRole": "Worker",
+                  "period": {
+                    "since": "2011 0 1",
+                    "till": "2011 0 1"
+                  },
+                  "freeText": "Some free text"
+                },
+                {
+                  "companyName": "Bad company",
+                  "companyRole": "No one",
+                  "period": {
+                    "since": "2011 0 1",
+                    "till": "2011 0 1"
+                  },
+                  "freeText": "The same text as always"
+                }
+              ],
+              "job": {
+                "currentSalary": 5000,
+                "desiredSalary": 8000,
+                "campaignSource": "Something",
+                "desiredPosition": "Team lead",
+                "relocation": true,
+                "workScope": "JS PHP",
+                "availability": "yes",
+                "days": 15
+              },
+              "active": true,
+              "usersCallsList": [
+                {
+                  "date": "2008 3 4",
+                  "freeText": "Bla bla bla bla"
+                },
+                {
+                  "date": "2009 4 5",
+                  "freeText": "Olo lo lo lo lo"
+                },
+                {
+                  "date": "2010 5 6",
+                  "freeText": "Tra ta ta ta ta ta"
+                }
+              ]
+            },
+            {
+              "personal": {
+                "firstName": "Steven Grant",
+                "lastName": "Rogers",
+                "gender": "male",
+                "birthday": "2011 0 1",
+                "ID": 158,
+                "country": "Israel",
+                "city": "Yavne",
+                "phone": "+33 973 52 12",
+                "phone2": "",
+                "description": "Some text",
+                "militaryHistory": "Army general",
+                "email": "fdsf@fdfs.gf"
+              },
+              "academic": [
+                {"placeholder": "Text text", "value": "Professor"},
+                {"placeholder": "Text text", "value": ""},
+                {"placeholder": "Text text", "value": ""},
+                {"placeholder": "Text text", "value": ""}
+              ],
+              "coursesDiplomas": [
+                {"placeholder": "Text text", "value": "Diploma of nothing"},
+                {"placeholder": "Text text", "value": "Diploma of everything"},
+                {"placeholder": "Text text", "value": ""},
+                {"placeholder": "Text text", "value": ""}
+              ],
+              "coursesDiplomasNotes": "Nothing special",
+              "skills": [
+                {"selected": "JS", "knowledge": "5"},
+                {"selected": "PHP", "knowledge": "8"},
+                {"selected": "", "knowledge": "1"},
+                {"selected": "", "knowledge": "1"}
+              ],
+              "languages": [
+                {"selected": "English", "knowledge": "8"},
+                {"selected": "French", "knowledge": "10"},
+                {"selected": "", "knowledge": "1"},
+                {"selected": "", "knowledge": "1"}
+              ],
+              "usersJobsList": [
+                {
+                  "companyName": "Good company",
+                  "companyRole": "Worker",
+                  "period": {
+                    "since": "2011 0 1",
+                    "till": "2014 0 1"
+                  },
+                  "freeText": "Some free text"
+                },
+                {
+                  "companyName": "Bad company",
+                  "companyRole": "No one",
+                  "period": {
+                    "since": "2011 0 1",
+                    "till": "2014 0 1"
+                  },
+                  "freeText": "The same text as always"
+                }
+              ],
+              "job": {
+                "currentSalary": 5000,
+                "desiredSalary": 8000,
+                "campaignSource": "Something",
+                "desiredPosition": "Team lead",
+                "relocation": true,
+                "workScope": "JS PHP",
+                "availability": "yes",
+                "days": 15
+              },
+              "active": true,
+              "usersCallsList": [
+                {
+                  "date": "2008 3 4",
+                  "freeText": "Bla bla bla bla"
+                },
+                {
+                  "date": "2009 4 5",
+                  "freeText": "Olo lo lo lo lo"
+                },
+                {
+                  "date": "2010 5 6",
+                  "freeText": "Tra ta ta ta ta ta"
+                }
+              ]
+            },
+            {
+              "personal": {
+                "firstName": "Alexander 'Lex' Joseph",
+                "lastName": "Luthor",
+                "gender": "male",
+                "birthday": "2011 0 1",
+                "ID": 159,
+                "country": "Israel",
+                "city": "Yavne",
+                "phone": "+33 973 52 12",
+                "phone2": "",
+                "description": "Some text",
+                "militaryHistory": "Army general",
+                "email": "fdsf@fdfs.gf"
+              },
+              "academic": [
+                {"placeholder": "Text text", "value": "Professor"},
+                {"placeholder": "Text text", "value": ""},
+                {"placeholder": "Text text", "value": ""},
+                {"placeholder": "Text text", "value": ""}
+              ],
+              "coursesDiplomas": [
+                {"placeholder": "Text text", "value": "Diploma of nothing"},
+                {"placeholder": "Text text", "value": "Diploma of everything"},
+                {"placeholder": "Text text", "value": ""},
+                {"placeholder": "Text text", "value": ""}
+              ],
+              "coursesDiplomasNotes": "Nothing special",
+              "skills": [
+                {"selected": "JS", "knowledge": "5"},
+                {"selected": "PHP", "knowledge": "8"},
+                {"selected": "", "knowledge": "1"},
+                {"selected": "", "knowledge": "1"}
+              ],
+              "languages": [
+                {"selected": "English", "knowledge": "8"},
+                {"selected": "French", "knowledge": "10"},
+                {"selected": "", "knowledge": "1"},
+                {"selected": "", "knowledge": "1"}
+              ],
+              "usersJobsList": [
+                {
+                  "companyName": "Good company",
+                  "companyRole": "Worker",
+                  "period": {
+                    "since": "2011 0 1",
+                    "till": "2014 0 1"
+                  },
+                  "freeText": "Some free text"
+                },
+                {
+                  "companyName": "Bad company",
+                  "companyRole": "No one",
+                  "period": {
+                    "since": "2011 0 1",
+                    "till": "2014 0 1"
+                  },
+                  "freeText": "The same text as always"
+                }
+              ],
+              "job": {
+                "currentSalary": 5000,
+                "desiredSalary": 8000,
+                "campaignSource": "Something",
+                "desiredPosition": "Team lead",
+                "relocation": true,
+                "workScope": "JS PHP",
+                "availability": "yes",
+                "days": 15
+              },
+              "active": true,
+              "usersCallsList": [
+                {
+                  "date": "2008 3 4",
+                  "freeText": "Bla bla bla bla"
+                },
+                {
+                  "date": "2009 4 5",
+                  "freeText": "Olo lo lo lo lo"
+                },
+                {
+                  "date": "2010 5 6",
+                  "freeText": "Tra ta ta ta ta ta"
+                }
+              ]
+            },
+            {
+              "personal": {
+                "firstName": "Rachel Anne",
+                "lastName": "Summers",
+                "gender": "female",
+                "birthday": "2011 0 1",
+                "ID": 160,
+                "country": "Israel",
+                "city": "Yavne",
+                "phone": "+33 973 52 12",
+                "phone2": "",
+                "description": "Some text",
+                "militaryHistory": "Army general",
+                "email": "fdsf@fdfs.gf"
+              },
+              "academic": [
+                {"placeholder": "Text text", "value": "Professor"},
+                {"placeholder": "Text text", "value": ""},
+                {"placeholder": "Text text", "value": ""},
+                {"placeholder": "Text text", "value": ""}
+              ],
+              "coursesDiplomas": [
+                {"placeholder": "Text text", "value": "Diploma of nothing"},
+                {"placeholder": "Text text", "value": "Diploma of everything"},
+                {"placeholder": "Text text", "value": ""},
+                {"placeholder": "Text text", "value": ""}
+              ],
+              "coursesDiplomasNotes": "Nothing special",
+              "skills": [
+                {"selected": "JS", "knowledge": "5"},
+                {"selected": "PHP", "knowledge": "8"},
+                {"selected": "", "knowledge": "1"},
+                {"selected": "", "knowledge": "1"}
+              ],
+              "languages": [
+                {"selected": "English", "knowledge": "8"},
+                {"selected": "French", "knowledge": "10"},
+                {"selected": "", "knowledge": "1"},
+                {"selected": "", "knowledge": "1"}
+              ],
+              "usersJobsList": [
+                {
+                  "companyName": "Good company",
+                  "companyRole": "Worker",
+                  "period": {
+                    "since": "2011 0 1",
+                    "till": "2014 0 1"
+                  },
+                  "freeText": "Some free text"
+                },
+                {
+                  "companyName": "Bad company",
+                  "companyRole": "No one",
+                  "period": {
+                    "since": "2011 0 1",
+                    "till": "2014 0 1"
+                  },
+                  "freeText": "The same text as always"
+                }
+              ],
+              "job": {
+                "currentSalary": 5000,
+                "desiredSalary": 8000,
+                "campaignSource": "Something",
+                "desiredPosition": "Team lead",
+                "relocation": true,
+                "workScope": "JS PHP",
+                "availability": "yes",
+                "days": 15
+              },
+              "active": true,
+              "usersCallsList": [
+                {
+                  "date": "2008 3 4",
+                  "freeText": "Bla bla bla bla"
+                },
+                {
+                  "date": "2009 4 5",
+                  "freeText": "Olo lo lo lo lo"
+                },
+                {
+                  "date": "2010 5 6",
+                  "freeText": "Tra ta ta ta ta ta"
+                }
+              ]
+            },
+            {
+              "personal": {
+                "firstName": "Oswald Chesterfield",
+                "lastName": "Cobblepot",
+                "gender": "male",
+                "birthday": "2011 0 1",
+                "ID": 161,
+                "country": "Israel",
+                "city": "Yavne",
+                "phone": "+33 973 52 12",
+                "phone2": "",
+                "description": "Some text",
+                "militaryHistory": "Army general",
+                "email": "fdsf@fdfs.gf"
+              },
+              "academic": [
+                {"placeholder": "Text text", "value": "Professor"},
+                {"placeholder": "Text text", "value": ""},
+                {"placeholder": "Text text", "value": ""},
+                {"placeholder": "Text text", "value": ""}
+              ],
+              "coursesDiplomas": [
+                {"placeholder": "Text text", "value": "Diploma of nothing"},
+                {"placeholder": "Text text", "value": "Diploma of everything"},
+                {"placeholder": "Text text", "value": ""},
+                {"placeholder": "Text text", "value": ""}
+              ],
+              "coursesDiplomasNotes": "Nothing special",
+              "skills": [
+                {"selected": "JS", "knowledge": "5"},
+                {"selected": "PHP", "knowledge": "8"},
+                {"selected": "", "knowledge": "1"},
+                {"selected": "", "knowledge": "1"}
+              ],
+              "languages": [
+                {"selected": "English", "knowledge": "8"},
+                {"selected": "French", "knowledge": "10"},
+                {"selected": "", "knowledge": "1"},
+                {"selected": "", "knowledge": "1"}
+              ],
+              "usersJobsList": [
+                {
+                  "companyName": "Good company",
+                  "companyRole": "Worker",
+                  "period": {
+                    "since": "2011 0 1",
+                    "till": "2014 0 1"
+                  },
+                  "freeText": "Some free text"
+                },
+                {
+                  "companyName": "Bad company",
+                  "companyRole": "No one",
+                  "period": {
+                    "since": "2011 0 1",
+                    "till": "2014 0 1"
+                  },
+                  "freeText": "The same text as always"
+                }
+              ],
+              "job": {
+                "currentSalary": 5000,
+                "desiredSalary": 8000,
+                "campaignSource": "Something",
+                "desiredPosition": "Team lead",
+                "relocation": true,
+                "workScope": "JS PHP",
+                "availability": "yes",
+                "days": 15
+              },
+              "active": true,
+              "usersCallsList": [
+                {
+                  "date": "2008 3 4",
+                  "freeText": "Bla bla bla bla"
+                },
+                {
+                  "date": "2009 4 5",
+                  "freeText": "Olo lo lo lo lo"
+                },
+                {
+                  "date": "2010 5 6",
+                  "freeText": "Tra ta ta ta ta ta"
+                }
+              ]
+            },
+            {
+              "personal": {
+                "firstName": "Anna",
+                "lastName": "Marie",
+                "gender": "female",
+                "birthday": "2011 0 1",
+                "ID": 162,
+                "country": "Israel",
+                "city": "Yavne",
+                "phone": "+33 973 52 12",
+                "phone2": "",
+                "description": "Some text",
+                "militaryHistory": "Army general",
+                "email": "fdsf@fdfs.gf"
+              },
+              "academic": [
+                {"placeholder": "Text text", "value": "Professor"},
+                {"placeholder": "Text text", "value": ""},
+                {"placeholder": "Text text", "value": ""},
+                {"placeholder": "Text text", "value": ""}
+              ],
+              "coursesDiplomas": [
+                {"placeholder": "Text text", "value": "Diploma of nothing"},
+                {"placeholder": "Text text", "value": "Diploma of everything"},
+                {"placeholder": "Text text", "value": ""},
+                {"placeholder": "Text text", "value": ""}
+              ],
+              "coursesDiplomasNotes": "Nothing special",
+              "skills": [
+                {"selected": "JS", "knowledge": "5"},
+                {"selected": "PHP", "knowledge": "8"},
+                {"selected": "", "knowledge": "1"},
+                {"selected": "", "knowledge": "1"}
+              ],
+              "languages": [
+                {"selected": "English", "knowledge": "8"},
+                {"selected": "French", "knowledge": "10"},
+                {"selected": "", "knowledge": "1"},
+                {"selected": "", "knowledge": "1"}
+              ],
+              "usersJobsList": [
+                {
+                  "companyName": "Good company",
+                  "companyRole": "Worker",
+                  "period": {
+                    "since": "2011 0 1",
+                    "till": "2014 0 1"
+                  },
+                  "freeText": "Some free text"
+                },
+                {
+                  "companyName": "Bad company",
+                  "companyRole": "No one",
+                  "period": {
+                    "since": "2011 0 1",
+                    "till": "2014 0 1"
+                  },
+                  "freeText": "The same text as always"
+                }
+              ],
+              "job": {
+                "currentSalary": 5000,
+                "desiredSalary": 8000,
+                "campaignSource": "Something",
+                "desiredPosition": "Team lead",
+                "relocation": true,
+                "workScope": "JS PHP",
+                "availability": "yes",
+                "days": 15
+              },
+              "active": true,
+              "usersCallsList": [
+                {
+                  "date": "2008 3 4",
+                  "freeText": "Bla bla bla bla"
+                },
+                {
+                  "date": "2009 4 5",
+                  "freeText": "Olo lo lo lo lo"
+                },
+                {
+                  "date": "2010 5 6",
+                  "freeText": "Tra ta ta ta ta ta"
+                }
+              ]
+            }
+          ]
+        }
+
+### Create a New Candidate [POST]
+
+You may create your own candidate using this action. It takes a JSON
+object containing new candidate data.
+
++ Request (application/json)
+
+            {
+              "personal": {
+                "firstName": "Oliver",
+                "lastName": "Twister",
+                "gender": "male",
+                "birthday": "2011 0 1",
+                "ID": 163,
+                "country": "Israel",
+                "city": "Yavne",
+                "phone": "+33 973 52 12",
+                "phone2": "",
+                "description": "Some text",
+                "militaryHistory": "Army general",
+                "email": "fdsf@fdfs.gf"
+              },
+              "academic": [
+                {"placeholder": "Text text", "value": "Professor"},
+                {"placeholder": "Text text", "value": ""},
+                {"placeholder": "Text text", "value": ""},
+                {"placeholder": "Text text", "value": ""}
+              ],
+              "coursesDiplomas": [
+                {"placeholder": "Text text", "value": "Diploma of nothing"},
+                {"placeholder": "Text text", "value": "Diploma of everything"},
+                {"placeholder": "Text text", "value": ""},
+                {"placeholder": "Text text", "value": ""}
+              ],
+              "coursesDiplomasNotes": "Nothing special",
+              "skills": [
+                {"selected": "JS", "knowledge": "5"},
+                {"selected": "PHP", "knowledge": "8"},
+                {"selected": "", "knowledge": "1"},
+                {"selected": "", "knowledge": "1"}
+              ],
+              "languages": [
+                {"selected": "English", "knowledge": "8"},
+                {"selected": "French", "knowledge": "10"},
+                {"selected": "", "knowledge": "1"},
+                {"selected": "", "knowledge": "1"}
+              ],
+              "usersJobsList": [
+                {
+                  "companyName": "Good company",
+                  "companyRole": "Worker",
+                  "period": {
+                    "since": "2011 0 1",
+                    "till": "2014 0 1"
+                  },
+                  "freeText": "Some free text"
+                },
+                {
+                  "companyName": "Bad company",
+                  "companyRole": "No one",
+                  "period": {
+                    "since": "2011 0 1",
+                    "till": "2014 0 1"
+                  },
+                  "freeText": "The same text as always"
+                }
+              ],
+              "job": {
+                "currentSalary": 5000,
+                "desiredSalary": 8000,
+                "campaignSource": "Something",
+                "desiredPosition": "Team lead",
+                "relocation": true,
+                "workScope": "JS PHP",
+                "availability": "yes",
+                "days": 15
+              },
+              "active": true,
+              "usersCallsList": [
+                {
+                  "date": "2008 3 4",
+                  "freeText": "Bla bla bla bla"
+                },
+                {
+                  "date": "2009 4 5",
+                  "freeText": "Olo lo lo lo lo"
+                },
+                {
+                  "date": "2010 5 6",
+                  "freeText": "Tra ta ta ta ta ta"
+                }
+              ]
+            }
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /candidates/2
+
+    + Body
+
+            {
+              "personal": {
+                "firstName": "Oliver",
+                "lastName": "Twister",
+                "gender": "male",
+                "birthday": "2011 0 1",
+                "ID": 163,
+                "country": "Israel",
+                "city": "Yavne",
+                "phone": "+33 973 52 12",
+                "phone2": "",
+                "description": "Some text",
+                "militaryHistory": "Army general",
+                "email": "fdsf@fdfs.gf"
+              },
+              "academic": [
+                {"placeholder": "Text text", "value": "Professor"},
+                {"placeholder": "Text text", "value": ""},
+                {"placeholder": "Text text", "value": ""},
+                {"placeholder": "Text text", "value": ""}
+              ],
+              "coursesDiplomas": [
+                {"placeholder": "Text text", "value": "Diploma of nothing"},
+                {"placeholder": "Text text", "value": "Diploma of everything"},
+                {"placeholder": "Text text", "value": ""},
+                {"placeholder": "Text text", "value": ""}
+              ],
+              "coursesDiplomasNotes": "Nothing special",
+              "skills": [
+                {"selected": "JS", "knowledge": "5"},
+                {"selected": "PHP", "knowledge": "8"},
+                {"selected": "", "knowledge": "1"},
+                {"selected": "", "knowledge": "1"}
+              ],
+              "languages": [
+                {"selected": "English", "knowledge": "8"},
+                {"selected": "French", "knowledge": "10"},
+                {"selected": "", "knowledge": "1"},
+                {"selected": "", "knowledge": "1"}
+              ],
+              "usersJobsList": [
+                {
+                  "companyName": "Good company",
+                  "companyRole": "Worker",
+                  "period": {
+                    "since": "2011 0 1",
+                    "till": "2014 0 1"
+                  },
+                  "freeText": "Some free text"
+                },
+                {
+                  "companyName": "Bad company",
+                  "companyRole": "No one",
+                  "period": {
+                    "since": "2011 0 1",
+                    "till": "2014 0 1"
+                  },
+                  "freeText": "The same text as always"
+                }
+              ],
+              "job": {
+                "currentSalary": 5000,
+                "desiredSalary": 8000,
+                "campaignSource": "Something",
+                "desiredPosition": "Team lead",
+                "relocation": true,
+                "workScope": "JS PHP",
+                "availability": "yes",
+                "days": 15
+              },
+              "active": true,
+              "usersCallsList": [
+                {
+                  "date": "2008 3 4",
+                  "freeText": "Bla bla bla bla"
+                },
+                {
+                  "date": "2009 4 5",
+                  "freeText": "Olo lo lo lo lo"
+                },
+                {
+                  "date": "2010 5 6",
+                  "freeText": "Tra ta ta ta ta ta"
+                }
+              ]
+            }
