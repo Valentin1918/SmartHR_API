@@ -1,2586 +1,236 @@
 FORMAT: 1A
 HOST: http://polls.apiblueprint.org/
-
 # SmartHR
-
 Smart HR API.
 
-## Candidates [/candidates]
-
-### List All Candidates [GET]
-
+## Candidate [/candidates]
+### Candidate FUll Object [GET]
 + Response 200 (application/json)
 
         {
-          "candidates": [
+          "id": 1,
+          "personal": {
+            "firstName": "Bruce",
+            "lastName": "Wayne",
+            "gender": "1",
+            "birthday": "2011-0-1",
+            "personID": "457981",
+            "country": "IS",
+            "city": "Yavne",
+            "phone": "+33 973 52 12",
+            "phone2": "",
+            "description": "Some text",
+            "militaryHistory": "Army general",
+            "email": "fdsf@fdfs.gf"
+          },
+          "academic": [
+            {"placeholder": "Text text", "value": "Professor"},
+            {"placeholder": "Text text", "value": ""},
+            {"placeholder": "Text text", "value": ""},
+            {"placeholder": "Text text", "value": ""}
+          ],
+          "coursesDiplomas": [
+            {"placeholder": "Text text", "value": "Diploma of nothing"},
+            {"placeholder": "Text text", "value": "Diploma of everything"},
+            {"placeholder": "Text text", "value": ""},
+            {"placeholder": "Text text", "value": ""}
+          ],
+          "coursesDiplomasNotes": "Nothing special",
+          "skills": [
+            {"selected": "JS", "knowledge": "5", "ID": 0, "disabled": false},
+            {"selected": "PHP", "knowledge": "8", "ID": 1, "disabled": false},
+            {"selected": "", "knowledge": "1", "ID": 2, "disabled": true},
+            {"selected": "", "knowledge": "1", "ID": 3, "disabled": true}
+          ],
+          "languages": [
+            {"selected": "English", "knowledge": "8", "ID": 0, "disabled": false},
+            {"selected": "French", "knowledge": "10", "ID": 1, "disabled": false},
+            {"selected": "", "knowledge": "1", "ID": 2, "disabled": true},
+            {"selected": "", "knowledge": "1", "ID": 3, "disabled": true}
+          ],
+          "usersJobsList": [
             {
-              "personal": {
-                "firstName": "Bruce",
-                "lastName": "Wayne",
-                "gender": "male",
-                "birthday": "2011 0 1",
-                "ID": 150,
-                "country": "Israel",
-                "city": "Yavne",
-                "phone": "+33 973 52 12",
-                "phone2": "",
-                "description": "Some text",
-                "militaryHistory": "Army general",
-                "email": "fdsf@fdfs.gf"
+              "companyName": "Good company",
+              "companyRole": "Worker",
+              "period": {
+                "since": "2011-0-1",
+                "till": "2014-0-1"
               },
-              "academic": [
-                {"placeholder": "Text text", "value": "Professor"},
-                {"placeholder": "Text text", "value": ""},
-                {"placeholder": "Text text", "value": ""},
-                {"placeholder": "Text text", "value": ""}
-              ],
-              "coursesDiplomas": [
-                {"placeholder": "Text text", "value": "Diploma of nothing"},
-                {"placeholder": "Text text", "value": "Diploma of everything"},
-                {"placeholder": "Text text", "value": ""},
-                {"placeholder": "Text text", "value": ""}
-              ],
-              "coursesDiplomasNotes": "Nothing special",
-              "skills": [
-                {"selected": "JS", "knowledge": "5"},
-                {"selected": "PHP", "knowledge": "8"},
-                {"selected": "", "knowledge": "1"},
-                {"selected": "", "knowledge": "1"}
-              ],
-              "languages": [
-                {"selected": "English", "knowledge": "8"},
-                {"selected": "French", "knowledge": "10"},
-                {"selected": "", "knowledge": "1"},
-                {"selected": "", "knowledge": "1"}
-              ],
-              "usersJobsList": [
-                {
-                  "companyName": "Good company",
-                  "companyRole": "Worker",
-                  "period": {
-                    "since": "2011 0 1",
-                    "till": "2014 0 1"
-                  },
-                  "freeText": "Some free text"
-                },
-                {
-                  "companyName": "Bad company",
-                  "companyShortName": "Worst company",
-                  "companyRole": "No one",
-                  "period": {
-                    "since": "2011 0 1",
-                    "till": "2015 0 1"
-                  },
-                  "freeText": "The same text as always"
-                },
-                {
-                  "companyName": "Long company",
-                  "companyShortName": "The longest company name in the world",
-                  "companyRole": "No one",
-                  "period": {
-                    "since": "2011 0 1",
-                    "till": "2015 0 1"
-                  },
-                  "freeText": "The same text as always"
-                }
-              ],
-              "job": {
-                "currentSalary": 5000,
-                "desiredSalary": 8000,
-                "campaignSource": "Something",
-                "desiredPosition": "Team lead",
-                "relocation": true,
-                "workScope": "JS PHP",
-                "availability": "yes",
-                "days": 15
-              },
-              "active": true,
-              "usersCallsList": [
-                {
-                  "date": "2008 3 4",
-                  "freeText": "Bla bla bla bla"
-                },
-                {
-                  "date": "2009 4 5",
-                  "freeText": "Olo lo lo lo lo"
-                },
-                {
-                  "date": "2010 5 6",
-                  "freeText": "Tra ta ta ta ta ta"
-                }
-              ]
+              "freeText": "Some free text"
             },
             {
-              "personal": {
-                "firstName": "Clark",
-                "lastName": "Kent",
-                "gender": "male",
-                "birthday": "2013 3 1",
-                "ID": 151,
-                "country": "Israel",
-                "city": "Yavne",
-                "phone": "+33 973 52 12",
-                "phone2": "",
-                "description": "Some text",
-                "militaryHistory": "Army general",
-                "email": "fdsf@fdfs.gf"
+              "companyName": "Bad company",
+              "companyShortName": "Worst company",
+              "companyRole": "No one",
+              "period": {
+                "since": "2011-0-1",
+                "till": "2015-0-1"
               },
-              "academic": [
-                {"placeholder": "Text text", "value": "Professor"},
-                {"placeholder": "Text text", "value": ""},
-                {"placeholder": "Text text", "value": ""},
-                {"placeholder": "Text text", "value": ""}
-              ],
-              "coursesDiplomas": [
-                {"placeholder": "Text text", "value": "Diploma of nothing"},
-                {"placeholder": "Text text", "value": "Diploma of everything"},
-                {"placeholder": "Text text", "value": ""},
-                {"placeholder": "Text text", "value": ""}
-              ],
-              "coursesDiplomasNotes": "Nothing special",
-              "skills": [
-                {"selected": "JS", "knowledge": "5"},
-                {"selected": "PHP", "knowledge": "8"},
-                {"selected": "", "knowledge": "1"},
-                {"selected": "", "knowledge": "1"}
-              ],
-              "languages": [
-                {"selected": "English", "knowledge": "8"},
-                {"selected": "French", "knowledge": "10"},
-                {"selected": "", "knowledge": "1"},
-                {"selected": "", "knowledge": "1"}
-              ],
-              "usersJobsList": [
-                {
-                  "companyName": "Good company",
-                  "companyRole": "Worker",
-                  "period": {
-                    "since": "2011 0 1",
-                    "till": "2016 0 1"
-                  },
-                  "freeText": "Some free text"
-                },
-                {
-                  "companyName": "Bad company",
-                  "companyRole": "No one",
-                  "period": {
-                    "since": "2011 0 1",
-                    "till": "2014 0 1"
-                  },
-                  "freeText": "The same text as always"
-                }
-              ],
-              "job": {
-                "currentSalary": 5000,
-                "desiredSalary": 8000,
-                "campaignSource": "Something",
-                "desiredPosition": "Team lead",
-                "relocation": true,
-                "workScope": "JS PHP",
-                "availability": "yes",
-                "days": 15
-              },
-              "active": true,
-              "usersCallsList": [
-                {
-                  "date": "2008 3 4",
-                  "freeText": "Bla bla bla bla"
-                },
-                {
-                  "date": "2009 4 5",
-                  "freeText": "Olo lo lo lo lo"
-                },
-                {
-                  "date": "2010 5 6",
-                  "freeText": "Tra ta ta ta ta ta"
-                }
-              ]
+              "freeText": "The same text as always"
             },
             {
-              "personal": {
-                "firstName": "Selina",
-                "lastName": "Kyle",
-                "gender": "female",
-                "birthday": "1980 0 1",
-                "ID": 152,
-                "country": "Israel",
-                "city": "Yavne",
-                "phone": "+33 973 52 12",
-                "phone2": "",
-                "description": "Some text",
-                "militaryHistory": "Army general",
-                "email": "fdsf@fdfs.gf"
+              "companyName": "Long company",
+              "companyShortName": "The longest company name in the world",
+              "companyRole": "No one",
+              "period": {
+                "since": "2011-0-1",
+                "till": "2015-0-1"
               },
-              "academic": [
-                {"placeholder": "Text text", "value": "Professor"},
-                {"placeholder": "Text text", "value": ""},
-                {"placeholder": "Text text", "value": ""},
-                {"placeholder": "Text text", "value": ""}
-              ],
-              "coursesDiplomas": [
-                {"placeholder": "Text text", "value": "Diploma of nothing"},
-                {"placeholder": "Text text", "value": "Diploma of everything"},
-                {"placeholder": "Text text", "value": ""},
-                {"placeholder": "Text text", "value": ""}
-              ],
-              "coursesDiplomasNotes": "Nothing special",
-              "skills": [
-                {"selected": "JS", "knowledge": "5"},
-                {"selected": "PHP", "knowledge": "8"},
-                {"selected": "", "knowledge": "1"},
-                {"selected": "", "knowledge": "1"}
-              ],
-              "languages": [
-                {"selected": "English", "knowledge": "8"},
-                {"selected": "French", "knowledge": "10"},
-                {"selected": "", "knowledge": "1"},
-                {"selected": "", "knowledge": "1"}
-              ],
-              "usersJobsList": [
-                {
-                  "companyName": "Good company",
-                  "companyRole": "Worker",
-                  "period": {
-                    "since": "2011 0 1",
-                    "till": "2013 0 1"
-                  },
-                  "freeText": "Some free text"
-                },
-                {
-                  "companyName": "Bad company",
-                  "companyRole": "No one",
-                  "period": {
-                    "since": "2011 0 1",
-                    "till": "2014 0 1"
-                  },
-                  "freeText": "The same text as always"
-                }
-              ],
-              "job": {
-                "currentSalary": 5000,
-                "desiredSalary": 8000,
-                "campaignSource": "Something",
-                "desiredPosition": "Team lead",
-                "relocation": true,
-                "workScope": "JS PHP",
-                "availability": "yes",
-                "days": 15
-              },
-              "active": true,
-              "usersCallsList": [
-                {
-                  "date": "2008 3 4",
-                  "freeText": "Bla bla bla bla"
-                },
-                {
-                  "date": "2009 4 5",
-                  "freeText": "Olo lo lo lo lo"
-                },
-                {
-                  "date": "2010 5 6",
-                  "freeText": "Tra ta ta ta ta ta"
-                }
-              ]
+              "freeText": "The same text as always"
+            }
+          ],
+          "job": {
+            "currentSalary": 5000,
+            "desiredSalary": 8000,
+            "campaignSource": "Something",
+            "desiredPosition": "Team lead",
+            "relocation": true,
+            "workScope": "JS PHP",
+            "availability": "yes",
+            "days": 15
+          },
+          "active": true,
+          "usersCallsList": [
+            {
+              "date": "2008-3-4",
+              "freeText": "Bla bla bla bla"
             },
             {
-              "personal": {
-                "firstName": "Peter Benjamin",
-                "lastName": "Parker",
-                "gender": "male",
-                "birthday": "1988 4 1",
-                "ID": 153,
-                "country": "Israel",
-                "city": "Yavne",
-                "phone": "+33 973 52 12",
-                "phone2": "",
-                "description": "Some text",
-                "militaryHistory": "Army general",
-                "email": "fdsf@fdfs.gf"
-              },
-              "academic": [
-                {"placeholder": "Text text", "value": "Professor"},
-                {"placeholder": "Text text", "value": ""},
-                {"placeholder": "Text text", "value": ""},
-                {"placeholder": "Text text", "value": ""}
-              ],
-              "coursesDiplomas": [
-                {"placeholder": "Text text", "value": "Diploma of nothing"},
-                {"placeholder": "Text text", "value": "Diploma of everything"},
-                {"placeholder": "Text text", "value": ""},
-                {"placeholder": "Text text", "value": ""}
-              ],
-              "coursesDiplomasNotes": "Nothing special",
-              "skills": [
-                {"selected": "JS", "knowledge": "5"},
-                {"selected": "PHP", "knowledge": "8"},
-                {"selected": "", "knowledge": "1"},
-                {"selected": "", "knowledge": "1"}
-              ],
-              "languages": [
-                {"selected": "English", "knowledge": "8"},
-                {"selected": "French", "knowledge": "10"},
-                {"selected": "", "knowledge": "1"},
-                {"selected": "", "knowledge": "1"}
-              ],
-              "usersJobsList": [
-                {
-                  "companyName": "Good company",
-                  "companyRole": "Worker",
-                  "period": {
-                    "since": "2002 0 1",
-                    "till": "2005 0 1"
-                  },
-                  "freeText": "Some free text"
-                },
-                {
-                  "companyName": "Bad company",
-                  "companyRole": "No one",
-                  "period": {
-                    "since": "2008 0 1",
-                    "till": "2011 0 1"
-                  },
-                  "freeText": "The same text as always"
-                }
-              ],
-              "job": {
-                "currentSalary": 5000,
-                "desiredSalary": 8000,
-                "campaignSource": "Something",
-                "desiredPosition": "Team lead",
-                "relocation": true,
-                "workScope": "JS PHP",
-                "availability": "yes",
-                "days": 15
-              },
-              "active": true,
-              "usersCallsList": [
-                {
-                  "date": "2008 3 4",
-                  "freeText": "Bla bla bla bla"
-                },
-                {
-                  "date": "2009 4 5",
-                  "freeText": "Olo lo lo lo lo"
-                },
-                {
-                  "date": "2010 5 6",
-                  "freeText": "Tra ta ta ta ta ta"
-                }
-              ]
+              "date": "2009-4-5",
+              "freeText": "Olo lo lo lo lo"
             },
             {
-              "personal": {
-                "firstName": "Sean",
-                "lastName": "Cassidy",
-                "gender": "male",
-                "birthday": "1976 0 1",
-                "ID": 154,
-                "country": "Israel",
-                "city": "Yavne",
-                "phone": "+33 973 52 12",
-                "phone2": "",
-                "description": "Some text",
-                "militaryHistory": "Army general",
-                "email": "fdsf@fdfs.gf"
-              },
-              "academic": [
-                {"placeholder": "Text text", "value": "Professor"},
-                {"placeholder": "Text text", "value": ""},
-                {"placeholder": "Text text", "value": ""},
-                {"placeholder": "Text text", "value": ""}
-              ],
-              "coursesDiplomas": [
-                {"placeholder": "Text text", "value": "Diploma of nothing"},
-                {"placeholder": "Text text", "value": "Diploma of everything"},
-                {"placeholder": "Text text", "value": ""},
-                {"placeholder": "Text text", "value": ""}
-              ],
-              "coursesDiplomasNotes": "Nothing special",
-              "skills": [
-                {"selected": "JS", "knowledge": "5"},
-                {"selected": "PHP", "knowledge": "8"},
-                {"selected": "", "knowledge": "1"},
-                {"selected": "", "knowledge": "1"}
-              ],
-              "languages": [
-                {"selected": "English", "knowledge": "8"},
-                {"selected": "French", "knowledge": "10"},
-                {"selected": "", "knowledge": "1"},
-                {"selected": "", "knowledge": "1"}
-              ],
-              "usersJobsList": [
-                {
-                  "companyName": "Good company",
-                  "companyRole": "Worker",
-                  "period": {
-                    "since": "2011 0 1",
-                    "till": "2011 0 1"
-                  },
-                  "freeText": "Some free text"
-                },
-                {
-                  "companyName": "Bad company",
-                  "companyRole": "No one",
-                  "period": {
-                    "since": "2011 0 1",
-                    "till": "2011 0 1"
-                  },
-                  "freeText": "The same text as always"
-                }
-              ],
-              "job": {
-                "currentSalary": 5000,
-                "desiredSalary": 8000,
-                "campaignSource": "Something",
-                "desiredPosition": "Team lead",
-                "relocation": true,
-                "workScope": "JS PHP",
-                "availability": "yes",
-                "days": 15
-              },
-              "active": true,
-              "usersCallsList": [
-                {
-                  "date": "2008 3 4",
-                  "freeText": "Bla bla bla bla"
-                },
-                {
-                  "date": "2009 4 5",
-                  "freeText": "Olo lo lo lo lo"
-                },
-                {
-                  "date": "2010 5 6",
-                  "freeText": "Tra ta ta ta ta ta"
-                }
-              ]
+              "date": "2010-5-6",
+              "freeText": "Tra ta ta ta ta ta"
+            }
+          ]
+        }
+        
+## Jobs [/jobs]
+### Job FUll Object [GET]
++ Response 200 (application/json)
+
+        {
+          "id": 1,
+          "jobInformation": {
+            "company": "The Best",
+            "title": "Best of the best",
+            "description": "Some text",
+            "country": "IS",
+            "city": "Yavne",
+            "worksScope": "some scope",
+            "maxSalary": 5000,
+            "availability": "yes",
+            "days": 7,
+            "businessModel": "Some Model",
+            "relocation": true,
+            "ID": "150597"
+          },
+          "academic": [
+            {"placeholder": "Text text", "value": "Professor"},
+            {"placeholder": "Text text", "value": "Nobody"},
+            {"placeholder": "Text text", "value": ""},
+            {"placeholder": "Text text", "value": ""}
+          ],
+          "coursesDiplomas": [
+            {"placeholder": "Text text", "value": "Diploma of nothing"},
+            {"placeholder": "Text text", "value": "Diploma of everything"},
+            {"placeholder": "Text text", "value": ""},
+            {"placeholder": "Text text", "value": ""}
+          ],
+          "skillsNeeded": [
+            {"selected": "JS", "knowledge": "5", "ID": 0, "disabled": false},
+            {"selected": "PHP", "knowledge": "8", "ID": 1, "disabled": false},
+            {"selected": "", "knowledge": "1", "ID": 2, "disabled": true},
+            {"selected": "", "knowledge": "1", "ID": 3, "disabled": true}
+          ],
+          "languagesNeeded": [
+            {"selected": "English", "knowledge": "8", "ID": 0, "disabled": false},
+            {"selected": "French", "knowledge": "10", "ID": 1, "disabled": false},
+            {"selected": "", "knowledge": "1", "ID": 2, "disabled": true},
+            {"selected": "", "knowledge": "1", "ID": 3, "disabled": true}
+          ],
+          "notes": "Some interesting comment",
+          "editMode": false,
+          "active": true,
+          "jobsCallsList": [
+            {
+              "date": "2008-3-4",
+              "freeText": "Bla bla bla bla"
             },
             {
-              "personal": {
-                "firstName": "Tanya",
-                "lastName": "Sealy",
-                "gender": "female",
-                "birthday": "2011 0 1",
-                "ID": 155,
-                "country": "Israel",
-                "city": "Yavne",
-                "phone": "+33 973 52 12",
-                "phone2": "",
-                "description": "Some text",
-                "militaryHistory": "Army general",
-                "email": "fdsf@fdfs.gf"
-              },
-              "academic": [
-                {"placeholder": "Text text", "value": "Professor"},
-                {"placeholder": "Text text", "value": ""},
-                {"placeholder": "Text text", "value": ""},
-                {"placeholder": "Text text", "value": ""}
-              ],
-              "coursesDiplomas": [
-                {"placeholder": "Text text", "value": "Diploma of nothing"},
-                {"placeholder": "Text text", "value": "Diploma of everything"},
-                {"placeholder": "Text text", "value": ""},
-                {"placeholder": "Text text", "value": ""}
-              ],
-              "coursesDiplomasNotes": "Nothing special",
-              "skills": [
-                {"selected": "JS", "knowledge": "5"},
-                {"selected": "PHP", "knowledge": "8"},
-                {"selected": "", "knowledge": "1"},
-                {"selected": "", "knowledge": "1"}
-              ],
-              "languages": [
-                {"selected": "English", "knowledge": "8"},
-                {"selected": "French", "knowledge": "10"},
-                {"selected": "", "knowledge": "1"},
-                {"selected": "", "knowledge": "1"}
-              ],
-              "usersJobsList": [
-                {
-                  "companyName": "Good company",
-                  "companyRole": "Worker",
-                  "period": {
-                    "since": "2011 0 1",
-                    "till": "2011 0 1"
-                  },
-                  "freeText": "Some free text"
-                },
-                {
-                  "companyName": "Bad company",
-                  "companyRole": "No one",
-                  "period": {
-                    "since": "2011 0 1",
-                    "till": "2011 0 1"
-                  },
-                  "freeText": "The same text as always"
-                }
-              ],
-              "job": {
-                "currentSalary": 5000,
-                "desiredSalary": 8000,
-                "campaignSource": "Something",
-                "desiredPosition": "Team lead",
-                "relocation": true,
-                "workScope": "JS PHP",
-                "availability": "yes",
-                "days": 15
-              },
-              "active": true,
-              "usersCallsList": [
-                {
-                  "date": "2008 3 4",
-                  "freeText": "Bla bla bla bla"
-                },
-                {
-                  "date": "2009 4 5",
-                  "freeText": "Olo lo lo lo lo"
-                },
-                {
-                  "date": "2010 5 6",
-                  "freeText": "Tra ta ta ta ta ta"
-                }
-              ]
+              "date": "2009-4-5",
+              "freeText": "Olo lo lo lo lo"
             },
             {
-              "personal": {
-                "firstName": "Mary Elizabeth",
-                "lastName": "Kane",
-                "gender": "female",
-                "birthday": "2011 0 1",
-                "ID": 156,
-                "country": "Israel",
-                "city": "Yavne",
-                "phone": "+33 973 52 12",
-                "phone2": "",
-                "description": "Some text",
-                "militaryHistory": "Army general",
-                "email": "fdsf@fdfs.gf"
-              },
-              "academic": [
-                {"placeholder": "Text text", "value": "Professor"},
-                {"placeholder": "Text text", "value": ""},
-                {"placeholder": "Text text", "value": ""},
-                {"placeholder": "Text text", "value": ""}
-              ],
-              "coursesDiplomas": [
-                {"placeholder": "Text text", "value": "Diploma of nothing"},
-                {"placeholder": "Text text", "value": "Diploma of everything"},
-                {"placeholder": "Text text", "value": ""},
-                {"placeholder": "Text text", "value": ""}
-              ],
-              "coursesDiplomasNotes": "Nothing special",
-              "skills": [
-                {"selected": "JS", "knowledge": "5"},
-                {"selected": "PHP", "knowledge": "8"},
-                {"selected": "", "knowledge": "1"},
-                {"selected": "", "knowledge": "1"}
-              ],
-              "languages": [
-                {"selected": "English", "knowledge": "8"},
-                {"selected": "French", "knowledge": "10"},
-                {"selected": "", "knowledge": "1"},
-                {"selected": "", "knowledge": "1"}
-              ],
-              "usersJobsList": [
-                {
-                  "companyName": "Good company",
-                  "companyRole": "Worker",
-                  "period": {
-                    "since": "2011 0 1",
-                    "till": "2011 0 1"
-                  },
-                  "freeText": "Some free text"
-                },
-                {
-                  "companyName": "Bad company",
-                  "companyRole": "No one",
-                  "period": {
-                    "since": "2011 0 1",
-                    "till": "2011 0 1"
-                  },
-                  "freeText": "The same text as always"
-                }
-              ],
-              "job": {
-                "currentSalary": 5000,
-                "desiredSalary": 8000,
-                "campaignSource": "Something",
-                "desiredPosition": "Team lead",
-                "relocation": true,
-                "workScope": "JS PHP",
-                "availability": "yes",
-                "days": 15
-              },
-              "active": true,
-              "usersCallsList": [
-                {
-                  "date": "2008 3 4",
-                  "freeText": "Bla bla bla bla"
-                },
-                {
-                  "date": "2009 4 5",
-                  "freeText": "Olo lo lo lo lo"
-                },
-                {
-                  "date": "2010 5 6",
-                  "freeText": "Tra ta ta ta ta ta"
-                }
-              ]
-            },
-            {
-              "personal": {
-                "firstName": "Eric",
-                "lastName": "Brooks",
-                "gender": "male",
-                "birthday": "2011 0 1",
-                "ID": 157,
-                "country": "Israel",
-                "city": "Yavne",
-                "phone": "+33 973 52 12",
-                "phone2": "",
-                "description": "Some text",
-                "militaryHistory": "Army general",
-                "email": "fdsf@fdfs.gf"
-              },
-              "academic": [
-                {"placeholder": "Text text", "value": "Professor"},
-                {"placeholder": "Text text", "value": ""},
-                {"placeholder": "Text text", "value": ""},
-                {"placeholder": "Text text", "value": ""}
-              ],
-              "coursesDiplomas": [
-                {"placeholder": "Text text", "value": "Diploma of nothing"},
-                {"placeholder": "Text text", "value": "Diploma of everything"},
-                {"placeholder": "Text text", "value": ""},
-                {"placeholder": "Text text", "value": ""}
-              ],
-              "coursesDiplomasNotes": "Nothing special",
-              "skills": [
-                {"selected": "JS", "knowledge": "5"},
-                {"selected": "PHP", "knowledge": "8"},
-                {"selected": "", "knowledge": "1"},
-                {"selected": "", "knowledge": "1"}
-              ],
-              "languages": [
-                {"selected": "English", "knowledge": "8"},
-                {"selected": "French", "knowledge": "10"},
-                {"selected": "", "knowledge": "1"},
-                {"selected": "", "knowledge": "1"}
-              ],
-              "usersJobsList": [
-                {
-                  "companyName": "Good company",
-                  "companyRole": "Worker",
-                  "period": {
-                    "since": "2011 0 1",
-                    "till": "2011 0 1"
-                  },
-                  "freeText": "Some free text"
-                },
-                {
-                  "companyName": "Bad company",
-                  "companyRole": "No one",
-                  "period": {
-                    "since": "2011 0 1",
-                    "till": "2011 0 1"
-                  },
-                  "freeText": "The same text as always"
-                }
-              ],
-              "job": {
-                "currentSalary": 5000,
-                "desiredSalary": 8000,
-                "campaignSource": "Something",
-                "desiredPosition": "Team lead",
-                "relocation": true,
-                "workScope": "JS PHP",
-                "availability": "yes",
-                "days": 15
-              },
-              "active": true,
-              "usersCallsList": [
-                {
-                  "date": "2008 3 4",
-                  "freeText": "Bla bla bla bla"
-                },
-                {
-                  "date": "2009 4 5",
-                  "freeText": "Olo lo lo lo lo"
-                },
-                {
-                  "date": "2010 5 6",
-                  "freeText": "Tra ta ta ta ta ta"
-                }
-              ]
-            },
-            {
-              "personal": {
-                "firstName": "Steven Grant",
-                "lastName": "Rogers",
-                "gender": "male",
-                "birthday": "2011 0 1",
-                "ID": 158,
-                "country": "Israel",
-                "city": "Yavne",
-                "phone": "+33 973 52 12",
-                "phone2": "",
-                "description": "Some text",
-                "militaryHistory": "Army general",
-                "email": "fdsf@fdfs.gf"
-              },
-              "academic": [
-                {"placeholder": "Text text", "value": "Professor"},
-                {"placeholder": "Text text", "value": ""},
-                {"placeholder": "Text text", "value": ""},
-                {"placeholder": "Text text", "value": ""}
-              ],
-              "coursesDiplomas": [
-                {"placeholder": "Text text", "value": "Diploma of nothing"},
-                {"placeholder": "Text text", "value": "Diploma of everything"},
-                {"placeholder": "Text text", "value": ""},
-                {"placeholder": "Text text", "value": ""}
-              ],
-              "coursesDiplomasNotes": "Nothing special",
-              "skills": [
-                {"selected": "JS", "knowledge": "5"},
-                {"selected": "PHP", "knowledge": "8"},
-                {"selected": "", "knowledge": "1"},
-                {"selected": "", "knowledge": "1"}
-              ],
-              "languages": [
-                {"selected": "English", "knowledge": "8"},
-                {"selected": "French", "knowledge": "10"},
-                {"selected": "", "knowledge": "1"},
-                {"selected": "", "knowledge": "1"}
-              ],
-              "usersJobsList": [
-                {
-                  "companyName": "Good company",
-                  "companyRole": "Worker",
-                  "period": {
-                    "since": "2011 0 1",
-                    "till": "2014 0 1"
-                  },
-                  "freeText": "Some free text"
-                },
-                {
-                  "companyName": "Bad company",
-                  "companyRole": "No one",
-                  "period": {
-                    "since": "2011 0 1",
-                    "till": "2014 0 1"
-                  },
-                  "freeText": "The same text as always"
-                }
-              ],
-              "job": {
-                "currentSalary": 5000,
-                "desiredSalary": 8000,
-                "campaignSource": "Something",
-                "desiredPosition": "Team lead",
-                "relocation": true,
-                "workScope": "JS PHP",
-                "availability": "yes",
-                "days": 15
-              },
-              "active": true,
-              "usersCallsList": [
-                {
-                  "date": "2008 3 4",
-                  "freeText": "Bla bla bla bla"
-                },
-                {
-                  "date": "2009 4 5",
-                  "freeText": "Olo lo lo lo lo"
-                },
-                {
-                  "date": "2010 5 6",
-                  "freeText": "Tra ta ta ta ta ta"
-                }
-              ]
-            },
-            {
-              "personal": {
-                "firstName": "Alexander 'Lex' Joseph",
-                "lastName": "Luthor",
-                "gender": "male",
-                "birthday": "2011 0 1",
-                "ID": 159,
-                "country": "Israel",
-                "city": "Yavne",
-                "phone": "+33 973 52 12",
-                "phone2": "",
-                "description": "Some text",
-                "militaryHistory": "Army general",
-                "email": "fdsf@fdfs.gf"
-              },
-              "academic": [
-                {"placeholder": "Text text", "value": "Professor"},
-                {"placeholder": "Text text", "value": ""},
-                {"placeholder": "Text text", "value": ""},
-                {"placeholder": "Text text", "value": ""}
-              ],
-              "coursesDiplomas": [
-                {"placeholder": "Text text", "value": "Diploma of nothing"},
-                {"placeholder": "Text text", "value": "Diploma of everything"},
-                {"placeholder": "Text text", "value": ""},
-                {"placeholder": "Text text", "value": ""}
-              ],
-              "coursesDiplomasNotes": "Nothing special",
-              "skills": [
-                {"selected": "JS", "knowledge": "5"},
-                {"selected": "PHP", "knowledge": "8"},
-                {"selected": "", "knowledge": "1"},
-                {"selected": "", "knowledge": "1"}
-              ],
-              "languages": [
-                {"selected": "English", "knowledge": "8"},
-                {"selected": "French", "knowledge": "10"},
-                {"selected": "", "knowledge": "1"},
-                {"selected": "", "knowledge": "1"}
-              ],
-              "usersJobsList": [
-                {
-                  "companyName": "Good company",
-                  "companyRole": "Worker",
-                  "period": {
-                    "since": "2011 0 1",
-                    "till": "2014 0 1"
-                  },
-                  "freeText": "Some free text"
-                },
-                {
-                  "companyName": "Bad company",
-                  "companyRole": "No one",
-                  "period": {
-                    "since": "2011 0 1",
-                    "till": "2014 0 1"
-                  },
-                  "freeText": "The same text as always"
-                }
-              ],
-              "job": {
-                "currentSalary": 5000,
-                "desiredSalary": 8000,
-                "campaignSource": "Something",
-                "desiredPosition": "Team lead",
-                "relocation": true,
-                "workScope": "JS PHP",
-                "availability": "yes",
-                "days": 15
-              },
-              "active": true,
-              "usersCallsList": [
-                {
-                  "date": "2008 3 4",
-                  "freeText": "Bla bla bla bla"
-                },
-                {
-                  "date": "2009 4 5",
-                  "freeText": "Olo lo lo lo lo"
-                },
-                {
-                  "date": "2010 5 6",
-                  "freeText": "Tra ta ta ta ta ta"
-                }
-              ]
-            },
-            {
-              "personal": {
-                "firstName": "Rachel Anne",
-                "lastName": "Summers",
-                "gender": "female",
-                "birthday": "2011 0 1",
-                "ID": 160,
-                "country": "Israel",
-                "city": "Yavne",
-                "phone": "+33 973 52 12",
-                "phone2": "",
-                "description": "Some text",
-                "militaryHistory": "Army general",
-                "email": "fdsf@fdfs.gf"
-              },
-              "academic": [
-                {"placeholder": "Text text", "value": "Professor"},
-                {"placeholder": "Text text", "value": ""},
-                {"placeholder": "Text text", "value": ""},
-                {"placeholder": "Text text", "value": ""}
-              ],
-              "coursesDiplomas": [
-                {"placeholder": "Text text", "value": "Diploma of nothing"},
-                {"placeholder": "Text text", "value": "Diploma of everything"},
-                {"placeholder": "Text text", "value": ""},
-                {"placeholder": "Text text", "value": ""}
-              ],
-              "coursesDiplomasNotes": "Nothing special",
-              "skills": [
-                {"selected": "JS", "knowledge": "5"},
-                {"selected": "PHP", "knowledge": "8"},
-                {"selected": "", "knowledge": "1"},
-                {"selected": "", "knowledge": "1"}
-              ],
-              "languages": [
-                {"selected": "English", "knowledge": "8"},
-                {"selected": "French", "knowledge": "10"},
-                {"selected": "", "knowledge": "1"},
-                {"selected": "", "knowledge": "1"}
-              ],
-              "usersJobsList": [
-                {
-                  "companyName": "Good company",
-                  "companyRole": "Worker",
-                  "period": {
-                    "since": "2011 0 1",
-                    "till": "2014 0 1"
-                  },
-                  "freeText": "Some free text"
-                },
-                {
-                  "companyName": "Bad company",
-                  "companyRole": "No one",
-                  "period": {
-                    "since": "2011 0 1",
-                    "till": "2014 0 1"
-                  },
-                  "freeText": "The same text as always"
-                }
-              ],
-              "job": {
-                "currentSalary": 5000,
-                "desiredSalary": 8000,
-                "campaignSource": "Something",
-                "desiredPosition": "Team lead",
-                "relocation": true,
-                "workScope": "JS PHP",
-                "availability": "yes",
-                "days": 15
-              },
-              "active": true,
-              "usersCallsList": [
-                {
-                  "date": "2008 3 4",
-                  "freeText": "Bla bla bla bla"
-                },
-                {
-                  "date": "2009 4 5",
-                  "freeText": "Olo lo lo lo lo"
-                },
-                {
-                  "date": "2010 5 6",
-                  "freeText": "Tra ta ta ta ta ta"
-                }
-              ]
-            },
-            {
-              "personal": {
-                "firstName": "Oswald Chesterfield",
-                "lastName": "Cobblepot",
-                "gender": "male",
-                "birthday": "2011 0 1",
-                "ID": 161,
-                "country": "Israel",
-                "city": "Yavne",
-                "phone": "+33 973 52 12",
-                "phone2": "",
-                "description": "Some text",
-                "militaryHistory": "Army general",
-                "email": "fdsf@fdfs.gf"
-              },
-              "academic": [
-                {"placeholder": "Text text", "value": "Professor"},
-                {"placeholder": "Text text", "value": ""},
-                {"placeholder": "Text text", "value": ""},
-                {"placeholder": "Text text", "value": ""}
-              ],
-              "coursesDiplomas": [
-                {"placeholder": "Text text", "value": "Diploma of nothing"},
-                {"placeholder": "Text text", "value": "Diploma of everything"},
-                {"placeholder": "Text text", "value": ""},
-                {"placeholder": "Text text", "value": ""}
-              ],
-              "coursesDiplomasNotes": "Nothing special",
-              "skills": [
-                {"selected": "JS", "knowledge": "5"},
-                {"selected": "PHP", "knowledge": "8"},
-                {"selected": "", "knowledge": "1"},
-                {"selected": "", "knowledge": "1"}
-              ],
-              "languages": [
-                {"selected": "English", "knowledge": "8"},
-                {"selected": "French", "knowledge": "10"},
-                {"selected": "", "knowledge": "1"},
-                {"selected": "", "knowledge": "1"}
-              ],
-              "usersJobsList": [
-                {
-                  "companyName": "Good company",
-                  "companyRole": "Worker",
-                  "period": {
-                    "since": "2011 0 1",
-                    "till": "2014 0 1"
-                  },
-                  "freeText": "Some free text"
-                },
-                {
-                  "companyName": "Bad company",
-                  "companyRole": "No one",
-                  "period": {
-                    "since": "2011 0 1",
-                    "till": "2014 0 1"
-                  },
-                  "freeText": "The same text as always"
-                }
-              ],
-              "job": {
-                "currentSalary": 5000,
-                "desiredSalary": 8000,
-                "campaignSource": "Something",
-                "desiredPosition": "Team lead",
-                "relocation": true,
-                "workScope": "JS PHP",
-                "availability": "yes",
-                "days": 15
-              },
-              "active": true,
-              "usersCallsList": [
-                {
-                  "date": "2008 3 4",
-                  "freeText": "Bla bla bla bla"
-                },
-                {
-                  "date": "2009 4 5",
-                  "freeText": "Olo lo lo lo lo"
-                },
-                {
-                  "date": "2010 5 6",
-                  "freeText": "Tra ta ta ta ta ta"
-                }
-              ]
-            },
-            {
-              "personal": {
-                "firstName": "Anna",
-                "lastName": "Marie",
-                "gender": "female",
-                "birthday": "2011 0 1",
-                "ID": 162,
-                "country": "Israel",
-                "city": "Yavne",
-                "phone": "+33 973 52 12",
-                "phone2": "",
-                "description": "Some text",
-                "militaryHistory": "Army general",
-                "email": "fdsf@fdfs.gf"
-              },
-              "academic": [
-                {"placeholder": "Text text", "value": "Professor"},
-                {"placeholder": "Text text", "value": ""},
-                {"placeholder": "Text text", "value": ""},
-                {"placeholder": "Text text", "value": ""}
-              ],
-              "coursesDiplomas": [
-                {"placeholder": "Text text", "value": "Diploma of nothing"},
-                {"placeholder": "Text text", "value": "Diploma of everything"},
-                {"placeholder": "Text text", "value": ""},
-                {"placeholder": "Text text", "value": ""}
-              ],
-              "coursesDiplomasNotes": "Nothing special",
-              "skills": [
-                {"selected": "JS", "knowledge": "5"},
-                {"selected": "PHP", "knowledge": "8"},
-                {"selected": "", "knowledge": "1"},
-                {"selected": "", "knowledge": "1"}
-              ],
-              "languages": [
-                {"selected": "English", "knowledge": "8"},
-                {"selected": "French", "knowledge": "10"},
-                {"selected": "", "knowledge": "1"},
-                {"selected": "", "knowledge": "1"}
-              ],
-              "usersJobsList": [
-                {
-                  "companyName": "Good company",
-                  "companyRole": "Worker",
-                  "period": {
-                    "since": "2011 0 1",
-                    "till": "2014 0 1"
-                  },
-                  "freeText": "Some free text"
-                },
-                {
-                  "companyName": "Bad company",
-                  "companyRole": "No one",
-                  "period": {
-                    "since": "2011 0 1",
-                    "till": "2014 0 1"
-                  },
-                  "freeText": "The same text as always"
-                }
-              ],
-              "job": {
-                "currentSalary": 5000,
-                "desiredSalary": 8000,
-                "campaignSource": "Something",
-                "desiredPosition": "Team lead",
-                "relocation": true,
-                "workScope": "JS PHP",
-                "availability": "yes",
-                "days": 15
-              },
-              "active": true,
-              "usersCallsList": [
-                {
-                  "date": "2008 3 4",
-                  "freeText": "Bla bla bla bla"
-                },
-                {
-                  "date": "2009 4 5",
-                  "freeText": "Olo lo lo lo lo"
-                },
-                {
-                  "date": "2010 5 6",
-                  "freeText": "Tra ta ta ta ta ta"
-                }
-              ]
+              "date": "2010-5-6",
+              "freeText": "Tra ta ta ta ta ta"
             }
           ]
         }
 
-## Candidates [/jobs]
-
-### List All Jobs [GET]
-
-+ Response 200 (application/json)
-
-         {
-          "jobs": [
-            {
-              "jobInformation": {
-                "company": "The Best",
-                "title": "Best of the best",
-                "description": "Some text",
-                "country": "Israel",
-                "city": "Yavne",
-                "worksScope": "some scope",
-                "maxSalary": 5000,
-                "availability": "yes",
-                "days": 7,
-                "businessModel": "Some Model",
-                "relocation": true,
-                "ID": 150
-              },
-              "academic": [
-                {"placeholder": "Text text", "value": "Professor"},
-                {"placeholder": "Text text", "value": "Nobody"},
-                {"placeholder": "Text text", "value": ""},
-                {"placeholder": "Text text", "value": ""}
-              ],
-              "coursesDiplomas": [
-                {"placeholder": "Text text", "value": "Diploma of nothing"},
-                {"placeholder": "Text text", "value": "Diploma of everything"},
-                {"placeholder": "Text text", "value": ""},
-                {"placeholder": "Text text", "value": ""}
-              ],
-              "skillsNeeded": [
-                {"selected": "JS", "knowledge": "5"},
-                {"selected": "PHP", "knowledge": "8"},
-                {"selected": "", "knowledge": "1"},
-                {"selected": "", "knowledge": "1"}
-              ],
-              "languagesNeeded": [
-                {"selected": "English", "knowledge": "8"},
-                {"selected": "French", "knowledge": "10"},
-                {"selected": "", "knowledge": "1"},
-                {"selected": "", "knowledge": "1"}
-              ],
-              "notes": "Some interesting comment",
-              "editMode": false,
-              "active": true,
-              "jobsCallsList": [
-                {
-                  "date": "2008 3 4",
-                  "freeText": "Bla bla bla bla"
-                },
-                {
-                  "date": "2009 4 5",
-                  "freeText": "Olo lo lo lo lo"
-                },
-                {
-                  "date": "2010 5 6",
-                  "freeText": "Tra ta ta ta ta ta"
-                }
-              ]
-            },
-            {
-              "jobInformation": {
-                "company": "The Worst",
-                "title": "Worst of the worst",
-                "description": "Some text",
-                "country": "Israel",
-                "city": "Yavne",
-                "worksScope": "some scope",
-                "maxSalary": 5000,
-                "availability": "yes",
-                "days": 7,
-                "businessModel": "Some Model",
-                "relocation": true,
-                "ID": 151
-              },
-              "academic": [
-                {"placeholder": "Text text", "value": "Professor"},
-                {"placeholder": "Text text", "value": "Nobody"},
-                {"placeholder": "Text text", "value": ""},
-                {"placeholder": "Text text", "value": ""}
-              ],
-              "coursesDiplomas": [
-                {"placeholder": "Text text", "value": "Diploma of nothing"},
-                {"placeholder": "Text text", "value": "Diploma of everything"},
-                {"placeholder": "Text text", "value": ""},
-                {"placeholder": "Text text", "value": ""}
-              ],
-              "skillsNeeded": [
-                {"selected": "JS", "knowledge": "5"},
-                {"selected": "PHP", "knowledge": "8"},
-                {"selected": "", "knowledge": "1"},
-                {"selected": "", "knowledge": "1"}
-              ],
-              "languagesNeeded": [
-                {"selected": "English", "knowledge": "8"},
-                {"selected": "French", "knowledge": "10"},
-                {"selected": "", "knowledge": "1"},
-                {"selected": "", "knowledge": "1"}
-              ],
-              "notes": "Some interesting comment",
-              "editMode": false,
-              "active": true,
-              "jobsCallsList": [
-                {
-                  "date": "2008 3 4",
-                  "freeText": "Bla bla bla bla"
-                },
-                {
-                  "date": "2009 4 5",
-                  "freeText": "Olo lo lo lo lo"
-                },
-                {
-                  "date": "2010 5 6",
-                  "freeText": "Tra ta ta ta ta ta"
-                }
-              ]
-            },
-            {
-              "jobInformation": {
-                "company": "Nothing special",
-                "title": "Nothing of the nothing",
-                "description": "Some text",
-                "country": "Israel",
-                "city": "Yavne",
-                "worksScope": "some scope",
-                "maxSalary": 5000,
-                "availability": "yes",
-                "days": 7,
-                "businessModel": "Some Model",
-                "relocation": true,
-                "ID": 152
-              },
-              "academic": [
-                {"placeholder": "Text text", "value": "Professor"},
-                {"placeholder": "Text text", "value": "Nobody"},
-                {"placeholder": "Text text", "value": ""},
-                {"placeholder": "Text text", "value": ""}
-              ],
-              "coursesDiplomas": [
-                {"placeholder": "Text text", "value": "Diploma of nothing"},
-                {"placeholder": "Text text", "value": "Diploma of everything"},
-                {"placeholder": "Text text", "value": ""},
-                {"placeholder": "Text text", "value": ""}
-              ],
-              "skillsNeeded": [
-                {"selected": "JS", "knowledge": "5"},
-                {"selected": "PHP", "knowledge": "8"},
-                {"selected": "", "knowledge": "1"},
-                {"selected": "", "knowledge": "1"}
-              ],
-              "languagesNeeded": [
-                {"selected": "English", "knowledge": "8"},
-                {"selected": "French", "knowledge": "10"},
-                {"selected": "", "knowledge": "1"},
-                {"selected": "", "knowledge": "1"}
-              ],
-              "notes": "Some interesting comment",
-              "editMode": false,
-              "active": true,
-              "jobsCallsList": [
-                {
-                  "date": "2008 3 4",
-                  "freeText": "Bla bla bla bla"
-                },
-                {
-                  "date": "2009 4 5",
-                  "freeText": "Olo lo lo lo lo"
-                },
-                {
-                  "date": "2010 5 6",
-                  "freeText": "Tra ta ta ta ta ta"
-                }
-              ]
-            },
-            {
-              "jobInformation": {
-                "company": "Unusual company",
-                "title": "Unusual of the unusual",
-                "description": "Some text",
-                "country": "Israel",
-                "city": "Yavne",
-                "worksScope": "some scope",
-                "maxSalary": 5000,
-                "availability": "yes",
-                "days": 7,
-                "businessModel": "Some Model",
-                "relocation": true,
-                "ID": 153
-              },
-              "academic": [
-                {"placeholder": "Text text", "value": "Professor"},
-                {"placeholder": "Text text", "value": "Nobody"},
-                {"placeholder": "Text text", "value": ""},
-                {"placeholder": "Text text", "value": ""}
-              ],
-              "coursesDiplomas": [
-                {"placeholder": "Text text", "value": "Diploma of nothing"},
-                {"placeholder": "Text text", "value": "Diploma of everything"},
-                {"placeholder": "Text text", "value": ""},
-                {"placeholder": "Text text", "value": ""}
-              ],
-              "skillsNeeded": [
-                {"selected": "JS", "knowledge": "5"},
-                {"selected": "PHP", "knowledge": "8"},
-                {"selected": "", "knowledge": "1"},
-                {"selected": "", "knowledge": "1"}
-              ],
-              "languagesNeeded": [
-                {"selected": "English", "knowledge": "8"},
-                {"selected": "French", "knowledge": "10"},
-                {"selected": "", "knowledge": "1"},
-                {"selected": "", "knowledge": "1"}
-              ],
-              "notes": "Some interesting comment",
-              "editMode": false,
-              "active": true,
-              "jobsCallsList": [
-                {
-                  "date": "2008 3 4",
-                  "freeText": "Bla bla bla bla"
-                },
-                {
-                  "date": "2009 4 5",
-                  "freeText": "Olo lo lo lo lo"
-                },
-                {
-                  "date": "2010 5 6",
-                  "freeText": "Tra ta ta ta ta ta"
-                }
-              ]
-            },
-            {
-              "jobInformation": {
-                "company": "Incredible company",
-                "title": "Incredible of the incredible",
-                "description": "Some text",
-                "country": "Israel",
-                "city": "Yavne",
-                "worksScope": "some scope",
-                "maxSalary": 5000,
-                "availability": "yes",
-                "days": 7,
-                "businessModel": "Some Model",
-                "relocation": true,
-                "ID": 154
-              },
-              "academic": [
-                {"placeholder": "Text text", "value": "Professor"},
-                {"placeholder": "Text text", "value": "Nobody"},
-                {"placeholder": "Text text", "value": ""},
-                {"placeholder": "Text text", "value": ""}
-              ],
-              "coursesDiplomas": [
-                {"placeholder": "Text text", "value": "Diploma of nothing"},
-                {"placeholder": "Text text", "value": "Diploma of everything"},
-                {"placeholder": "Text text", "value": ""},
-                {"placeholder": "Text text", "value": ""}
-              ],
-              "skillsNeeded": [
-                {"selected": "JS", "knowledge": "5"},
-                {"selected": "PHP", "knowledge": "8"},
-                {"selected": "", "knowledge": "1"},
-                {"selected": "", "knowledge": "1"}
-              ],
-              "languagesNeeded": [
-                {"selected": "English", "knowledge": "8"},
-                {"selected": "French", "knowledge": "10"},
-                {"selected": "", "knowledge": "1"},
-                {"selected": "", "knowledge": "1"}
-              ],
-              "notes": "Some interesting comment",
-              "editMode": false,
-              "active": true,
-              "jobsCallsList": [
-                {
-                  "date": "2008 3 4",
-                  "freeText": "Bla bla bla bla"
-                },
-                {
-                  "date": "2009 4 5",
-                  "freeText": "Olo lo lo lo lo"
-                },
-                {
-                  "date": "2010 5 6",
-                  "freeText": "Tra ta ta ta ta ta"
-                }
-              ]
-            },
-            {
-              "jobInformation": {
-                "company": "Stupid",
-                "title": "Stupid of the stupid",
-                "description": "Some text",
-                "country": "Israel",
-                "city": "Yavne",
-                "worksScope": "some scope",
-                "maxSalary": 5000,
-                "availability": "yes",
-                "days": 7,
-                "businessModel": "Some Model",
-                "relocation": true,
-                "ID": 155
-              },
-              "academic": [
-                {"placeholder": "Text text", "value": "Professor"},
-                {"placeholder": "Text text", "value": "Nobody"},
-                {"placeholder": "Text text", "value": ""},
-                {"placeholder": "Text text", "value": ""}
-              ],
-              "coursesDiplomas": [
-                {"placeholder": "Text text", "value": "Diploma of nothing"},
-                {"placeholder": "Text text", "value": "Diploma of everything"},
-                {"placeholder": "Text text", "value": ""},
-                {"placeholder": "Text text", "value": ""}
-              ],
-              "skillsNeeded": [
-                {"selected": "JS", "knowledge": "5"},
-                {"selected": "PHP", "knowledge": "8"},
-                {"selected": "", "knowledge": "1"},
-                {"selected": "", "knowledge": "1"}
-              ],
-              "languagesNeeded": [
-                {"selected": "English", "knowledge": "8"},
-                {"selected": "French", "knowledge": "10"},
-                {"selected": "", "knowledge": "1"},
-                {"selected": "", "knowledge": "1"}
-              ],
-              "notes": "Some interesting comment",
-              "editMode": false,
-              "active": true,
-              "jobsCallsList": [
-                {
-                  "date": "2008 3 4",
-                  "freeText": "Bla bla bla bla"
-                },
-                {
-                  "date": "2009 4 5",
-                  "freeText": "Olo lo lo lo lo"
-                },
-                {
-                  "date": "2010 5 6",
-                  "freeText": "Tra ta ta ta ta ta"
-                }
-              ]
-            },
-            {
-              "jobInformation": {
-                "company": "Rich one",
-                "title": "Rich of the rich",
-                "description": "Some text",
-                "country": "Israel",
-                "city": "Yavne",
-                "worksScope": "some scope",
-                "maxSalary": 5000,
-                "availability": "yes",
-                "days": 7,
-                "businessModel": "Some Model",
-                "relocation": true,
-                "ID": 156
-              },
-              "academic": [
-                {"placeholder": "Text text", "value": "Professor"},
-                {"placeholder": "Text text", "value": "Nobody"},
-                {"placeholder": "Text text", "value": ""},
-                {"placeholder": "Text text", "value": ""}
-              ],
-              "coursesDiplomas": [
-                {"placeholder": "Text text", "value": "Diploma of nothing"},
-                {"placeholder": "Text text", "value": "Diploma of everything"},
-                {"placeholder": "Text text", "value": ""},
-                {"placeholder": "Text text", "value": ""}
-              ],
-              "skillsNeeded": [
-                {"selected": "JS", "knowledge": "5"},
-                {"selected": "PHP", "knowledge": "8"},
-                {"selected": "", "knowledge": "1"},
-                {"selected": "", "knowledge": "1"}
-              ],
-              "languagesNeeded": [
-                {"selected": "English", "knowledge": "8"},
-                {"selected": "French", "knowledge": "10"},
-                {"selected": "", "knowledge": "1"},
-                {"selected": "", "knowledge": "1"}
-              ],
-              "notes": "Some interesting comment",
-              "editMode": false,
-              "active": true,
-              "jobsCallsList": [
-                {
-                  "date": "2008 3 4",
-                  "freeText": "Bla bla bla bla"
-                },
-                {
-                  "date": "2009 4 5",
-                  "freeText": "Olo lo lo lo lo"
-                },
-                {
-                  "date": "2010 5 6",
-                  "freeText": "Tra ta ta ta ta ta"
-                }
-              ]
-            },
-            {
-              "jobInformation": {
-                "company": "Poor one",
-                "title": "Poor of the poor",
-                "description": "Some text",
-                "country": "Israel",
-                "city": "Yavne",
-                "worksScope": "some scope",
-                "maxSalary": 5000,
-                "availability": "yes",
-                "days": 7,
-                "businessModel": "Some Model",
-                "relocation": true,
-                "ID": 157
-              },
-              "academic": [
-                {"placeholder": "Text text", "value": "Professor"},
-                {"placeholder": "Text text", "value": "Nobody"},
-                {"placeholder": "Text text", "value": ""},
-                {"placeholder": "Text text", "value": ""}
-              ],
-              "coursesDiplomas": [
-                {"placeholder": "Text text", "value": "Diploma of nothing"},
-                {"placeholder": "Text text", "value": "Diploma of everything"},
-                {"placeholder": "Text text", "value": ""},
-                {"placeholder": "Text text", "value": ""}
-              ],
-              "skillsNeeded": [
-                {"selected": "JS", "knowledge": "5"},
-                {"selected": "PHP", "knowledge": "8"},
-                {"selected": "", "knowledge": "1"},
-                {"selected": "", "knowledge": "1"}
-              ],
-              "languagesNeeded": [
-                {"selected": "English", "knowledge": "8"},
-                {"selected": "French", "knowledge": "10"},
-                {"selected": "", "knowledge": "1"},
-                {"selected": "", "knowledge": "1"}
-              ],
-              "notes": "Some interesting comment",
-              "editMode": false,
-              "active": true,
-              "jobsCallsList": [
-                {
-                  "date": "2008 3 4",
-                  "freeText": "Bla bla bla bla"
-                },
-                {
-                  "date": "2009 4 5",
-                  "freeText": "Olo lo lo lo lo"
-                },
-                {
-                  "date": "2010 5 6",
-                  "freeText": "Tra ta ta ta ta ta"
-                }
-              ]
-            },
-            {
-              "jobInformation": {
-                "company": "Tramp man",
-                "title": "Tramps united",
-                "description": "Some text",
-                "country": "Israel",
-                "city": "Yavne",
-                "worksScope": "some scope",
-                "maxSalary": 5000,
-                "availability": "yes",
-                "days": 7,
-                "businessModel": "Some Model",
-                "relocation": true,
-                "ID": 158
-              },
-              "academic": [
-                {"placeholder": "Text text", "value": "Professor"},
-                {"placeholder": "Text text", "value": "Nobody"},
-                {"placeholder": "Text text", "value": ""},
-                {"placeholder": "Text text", "value": ""}
-              ],
-              "coursesDiplomas": [
-                {"placeholder": "Text text", "value": "Diploma of nothing"},
-                {"placeholder": "Text text", "value": "Diploma of everything"},
-                {"placeholder": "Text text", "value": ""},
-                {"placeholder": "Text text", "value": ""}
-              ],
-              "skillsNeeded": [
-                {"selected": "JS", "knowledge": "5"},
-                {"selected": "PHP", "knowledge": "8"},
-                {"selected": "", "knowledge": "1"},
-                {"selected": "", "knowledge": "1"}
-              ],
-              "languagesNeeded": [
-                {"selected": "English", "knowledge": "8"},
-                {"selected": "French", "knowledge": "10"},
-                {"selected": "", "knowledge": "1"},
-                {"selected": "", "knowledge": "1"}
-              ],
-              "notes": "Some interesting comment",
-              "editMode": false,
-              "active": true,
-              "jobsCallsList": [
-                {
-                  "date": "2008 3 4",
-                  "freeText": "Bla bla bla bla"
-                },
-                {
-                  "date": "2009 4 5",
-                  "freeText": "Olo lo lo lo lo"
-                },
-                {
-                  "date": "2010 5 6",
-                  "freeText": "Tra ta ta ta ta ta"
-                }
-              ]
-            },
-            {
-              "jobInformation": {
-                "company": "Obama man",
-                "title": "Obama is the president",
-                "description": "Some text",
-                "country": "Israel",
-                "city": "Yavne",
-                "worksScope": "some scope",
-                "maxSalary": 5000,
-                "availability": "yes",
-                "days": 7,
-                "businessModel": "Some Model",
-                "relocation": true,
-                "ID": 159
-              },
-              "academic": [
-                {"placeholder": "Text text", "value": "Professor"},
-                {"placeholder": "Text text", "value": "Nobody"},
-                {"placeholder": "Text text", "value": ""},
-                {"placeholder": "Text text", "value": ""}
-              ],
-              "coursesDiplomas": [
-                {"placeholder": "Text text", "value": "Diploma of nothing"},
-                {"placeholder": "Text text", "value": "Diploma of everything"},
-                {"placeholder": "Text text", "value": ""},
-                {"placeholder": "Text text", "value": ""}
-              ],
-              "skillsNeeded": [
-                {"selected": "JS", "knowledge": "5"},
-                {"selected": "PHP", "knowledge": "8"},
-                {"selected": "", "knowledge": "1"},
-                {"selected": "", "knowledge": "1"}
-              ],
-              "languagesNeeded": [
-                {"selected": "English", "knowledge": "8"},
-                {"selected": "French", "knowledge": "10"},
-                {"selected": "", "knowledge": "1"},
-                {"selected": "", "knowledge": "1"}
-              ],
-              "notes": "Some interesting comment",
-              "editMode": false,
-              "active": true,
-              "jobsCallsList": [
-                {
-                  "date": "2008 3 4",
-                  "freeText": "Bla bla bla bla"
-                },
-                {
-                  "date": "2009 4 5",
-                  "freeText": "Olo lo lo lo lo"
-                },
-                {
-                  "date": "2010 5 6",
-                  "freeText": "Tra ta ta ta ta ta"
-                }
-              ]
-            },
-            {
-              "jobInformation": {
-                "company": "Radiation protection",
-                "title": "We will protect you tomorrow",
-                "description": "Some text",
-                "country": "Israel",
-                "city": "Yavne",
-                "worksScope": "some scope",
-                "maxSalary": 5000,
-                "availability": "yes",
-                "days": 7,
-                "businessModel": "Some Model",
-                "relocation": true,
-                "ID": 160
-              },
-              "academic": [
-                {"placeholder": "Text text", "value": "Professor"},
-                {"placeholder": "Text text", "value": "Nobody"},
-                {"placeholder": "Text text", "value": ""},
-                {"placeholder": "Text text", "value": ""}
-              ],
-              "coursesDiplomas": [
-                {"placeholder": "Text text", "value": "Diploma of nothing"},
-                {"placeholder": "Text text", "value": "Diploma of everything"},
-                {"placeholder": "Text text", "value": ""},
-                {"placeholder": "Text text", "value": ""}
-              ],
-              "skillsNeeded": [
-                {"selected": "JS", "knowledge": "5"},
-                {"selected": "PHP", "knowledge": "8"},
-                {"selected": "", "knowledge": "1"},
-                {"selected": "", "knowledge": "1"}
-              ],
-              "languagesNeeded": [
-                {"selected": "English", "knowledge": "8"},
-                {"selected": "French", "knowledge": "10"},
-                {"selected": "", "knowledge": "1"},
-                {"selected": "", "knowledge": "1"}
-              ],
-              "notes": "Some interesting comment",
-              "editMode": false,
-              "active": true,
-              "jobsCallsList": [
-                {
-                  "date": "2008 3 4",
-                  "freeText": "Bla bla bla bla"
-                },
-                {
-                  "date": "2009 4 5",
-                  "freeText": "Olo lo lo lo lo"
-                },
-                {
-                  "date": "2010 5 6",
-                  "freeText": "Tra ta ta ta ta ta"
-                }
-              ]
-            },
-            {
-              "jobInformation": {
-                "company": "Red book",
-                "title": "Protect the beast",
-                "description": "Some text",
-                "country": "Israel",
-                "city": "Yavne",
-                "worksScope": "some scope",
-                "maxSalary": 5000,
-                "availability": "yes",
-                "days": 7,
-                "businessModel": "Some Model",
-                "relocation": true,
-                "ID": 161
-              },
-              "academic": [
-                {"placeholder": "Text text", "value": "Professor"},
-                {"placeholder": "Text text", "value": "Nobody"},
-                {"placeholder": "Text text", "value": ""},
-                {"placeholder": "Text text", "value": ""}
-              ],
-              "coursesDiplomas": [
-                {"placeholder": "Text text", "value": "Diploma of nothing"},
-                {"placeholder": "Text text", "value": "Diploma of everything"},
-                {"placeholder": "Text text", "value": ""},
-                {"placeholder": "Text text", "value": ""}
-              ],
-              "skillsNeeded": [
-                {"selected": "JS", "knowledge": "5"},
-                {"selected": "PHP", "knowledge": "8"},
-                {"selected": "", "knowledge": "1"},
-                {"selected": "", "knowledge": "1"}
-              ],
-              "languagesNeeded": [
-                {"selected": "English", "knowledge": "8"},
-                {"selected": "French", "knowledge": "10"},
-                {"selected": "", "knowledge": "1"},
-                {"selected": "", "knowledge": "1"}
-              ],
-              "notes": "Some interesting comment",
-              "editMode": false,
-              "active": true,
-              "jobsCallsList": [
-                {
-                  "date": "2008 3 4",
-                  "freeText": "Bla bla bla bla"
-                },
-                {
-                  "date": "2009 4 5",
-                  "freeText": "Olo lo lo lo lo"
-                },
-                {
-                  "date": "2010 5 6",
-                  "freeText": "Tra ta ta ta ta ta"
-                }
-              ]
-            },
-            {
-              "jobInformation": {
-                "company": "The Last",
-                "title": "Last chance",
-                "description": "Some text",
-                "country": "Israel",
-                "city": "Yavne",
-                "worksScope": "some scope",
-                "maxSalary": 5000,
-                "availability": "yes",
-                "days": 7,
-                "businessModel": "Some Model",
-                "relocation": true,
-                "ID": 162
-              },
-              "academic": [
-                {"placeholder": "Text text", "value": "Professor"},
-                {"placeholder": "Text text", "value": "Nobody"},
-                {"placeholder": "Text text", "value": ""},
-                {"placeholder": "Text text", "value": ""}
-              ],
-              "coursesDiplomas": [
-                {"placeholder": "Text text", "value": "Diploma of nothing"},
-                {"placeholder": "Text text", "value": "Diploma of everything"},
-                {"placeholder": "Text text", "value": ""},
-                {"placeholder": "Text text", "value": ""}
-              ],
-              "skillsNeeded": [
-                {"selected": "JS", "knowledge": "5"},
-                {"selected": "PHP", "knowledge": "8"},
-                {"selected": "", "knowledge": "1"},
-                {"selected": "", "knowledge": "1"}
-              ],
-              "languagesNeeded": [
-                {"selected": "English", "knowledge": "8"},
-                {"selected": "French", "knowledge": "10"},
-                {"selected": "", "knowledge": "1"},
-                {"selected": "", "knowledge": "1"}
-              ],
-              "notes": "Some interesting comment",
-              "editMode": false,
-              "active": true,
-              "jobsCallsList": [
-                {
-                  "date": "2008 3 4",
-                  "freeText": "Bla bla bla bla"
-                },
-                {
-                  "date": "2009 4 5",
-                  "freeText": "Olo lo lo lo lo"
-                },
-                {
-                  "date": "2010 5 6",
-                  "freeText": "Tra ta ta ta ta ta"
-                }
-              ]
-            }
-        
-          ]
-        }
-
-## Companies [/companies]
-
-### List All Companies [GET]
-
+## Companie [/companies]
+### Companie FUll Object [GET]
 + Response 200 (application/json)
 
         {
-          "companies": [
+          "id": 1
+          "company": {
+            "title": "The Best",
+            "description": "Best of the best",
+            "phoneNumber": "5675476",
+            "country": "IS",
+            "mainAddress": "Somewhere",
+            "companyNumber": "656645",
+            "mainEmail": "ghfg@hjhg.jh",
+            "workingHours1": "08:00",
+            "workingHours2": "19:00",
+            "status": "Something",
+            "ID": "150974"
+          },
+          "companyContactsList": [
             {
-              "company": {
-                "title": "The Best",
-                "description": "Best of the best",
-                "phoneNumber": "5675476",
-                "country": "Israel",
-                "mainAddress": "Somewhere",
-                "companyNumber": "656645",
-                "mainEmail": "ghfg@hjhg.jh",
-                "workingHours1": "08:00",
-                "workingHours2": "19:00",
-                "status": "Something",
-                "ID": 150
-              },
-              "companyContactsList": [
-                {
-                  "companyName": "Name1",
-                  "companyRole": "Role1",
-                  "email": "email1@gmail.com",
-                  "phoneNumber": "+34 54 54556 3431"
-                },
-                {
-                  "companyName": "Name2",
-                  "companyRole": "Role2",
-                  "email": "email2@gmail.com",
-                  "phoneNumber": "+34 54 54556 3432"
-                },
-                {
-                  "companyName": "Name3",
-                  "companyRole": "Role3",
-                  "email": "email3@gmail.com",
-                  "phoneNumber": "+34 54 54556 3433"
-                }
-              ],
-              "editMode": false,
-              "active": true,
-              "companyCallsList": [
-                {
-                  "date": "2008 3 4",
-                  "freeText": "Bla bla bla bla"
-                },
-                {
-                  "date": "2009 4 5",
-                  "freeText": "Olo lo lo lo lo"
-                },
-                {
-                  "date": "2010 5 6",
-                  "freeText": "Tra ta ta ta ta ta"
-                }
-              ]
+              "companyName": "Name1",
+              "companyRole": "Role1",
+              "email": "email1@gmail.com",
+              "phoneNumber": "+34 54 54556 3431"
             },
             {
-              "company": {
-                "title": "The Worst",
-                "description": "Worst of the worst",
-                "phoneNumber": "5675476",
-                "country": "Israel",
-                "mainAddress": "Somewhere",
-                "companyNumber": "656645",
-                "mainEmail": "ghfg@hjhg.jh",
-                "workingHours1": "08:00",
-                "workingHours2": "19:00",
-                "status": "Something",
-                "ID": 151
-              },
-              "companyContactsList": [
-                {
-                  "companyName": "Name1",
-                  "companyRole": "Role1",
-                  "email": "email1@gmail.com",
-                  "phoneNumber": "+34 54 54556 3431"
-                },
-                {
-                  "companyName": "Name2",
-                  "companyRole": "Role2",
-                  "email": "email2@gmail.com",
-                  "phoneNumber": "+34 54 54556 3432"
-                },
-                {
-                  "companyName": "Name3",
-                  "companyRole": "Role3",
-                  "email": "email3@gmail.com",
-                  "phoneNumber": "+34 54 54556 3433"
-                }
-              ],
-              "editMode": false,
-              "active": true,
-              "companyCallsList": [
-                {
-                  "date": "2008 3 4",
-                  "freeText": "Bla bla bla bla"
-                },
-                {
-                  "date": "2009 4 5",
-                  "freeText": "Olo lo lo lo lo"
-                },
-                {
-                  "date": "2010 5 6",
-                  "freeText": "Tra ta ta ta ta ta"
-                }
-              ]
+              "companyName": "Name2",
+              "companyRole": "Role2",
+              "email": "email2@gmail.com",
+              "phoneNumber": "+34 54 54556 3432"
             },
             {
-              "company": {
-                "title": "Nothing special",
-                "description": "Nothing of the nothing",
-                "phoneNumber": "5675476",
-                "country": "Israel",
-                "mainAddress": "Somewhere",
-                "companyNumber": "656645",
-                "mainEmail": "ghfg@hjhg.jh",
-                "workingHours1": "08:00",
-                "workingHours2": "19:00",
-                "status": "Something",
-                "ID": 152
-              },
-              "companyContactsList": [
-                {
-                  "companyName": "Name1",
-                  "companyRole": "Role1",
-                  "email": "email1@gmail.com",
-                  "phoneNumber": "+34 54 54556 3431"
-                },
-                {
-                  "companyName": "Name2",
-                  "companyRole": "Role2",
-                  "email": "email2@gmail.com",
-                  "phoneNumber": "+34 54 54556 3432"
-                },
-                {
-                  "companyName": "Name3",
-                  "companyRole": "Role3",
-                  "email": "email3@gmail.com",
-                  "phoneNumber": "+34 54 54556 3433"
-                }
-              ],
-              "editMode": false,
-              "active": true,
-              "companyCallsList": [
-                {
-                  "date": "2008 3 4",
-                  "freeText": "Bla bla bla bla"
-                },
-                {
-                  "date": "2009 4 5",
-                  "freeText": "Olo lo lo lo lo"
-                },
-                {
-                  "date": "2010 5 6",
-                  "freeText": "Tra ta ta ta ta ta"
-                }
-              ]
-            },
-            {
-              "company": {
-                "title": "Unusual company",
-                "description": "Unusual of the unusual",
-                "phoneNumber": "5675476",
-                "country": "Israel",
-                "mainAddress": "Somewhere",
-                "companyNumber": "656645",
-                "mainEmail": "ghfg@hjhg.jh",
-                "workingHours1": "08:00",
-                "workingHours2": "19:00",
-                "status": "Something",
-                "ID": 153
-              },
-              "companyContactsList": [
-                {
-                  "companyName": "Name1",
-                  "companyRole": "Role1",
-                  "email": "email1@gmail.com",
-                  "phoneNumber": "+34 54 54556 3431"
-                },
-                {
-                  "companyName": "Name2",
-                  "companyRole": "Role2",
-                  "email": "email2@gmail.com",
-                  "phoneNumber": "+34 54 54556 3432"
-                },
-                {
-                  "companyName": "Name3",
-                  "companyRole": "Role3",
-                  "email": "email3@gmail.com",
-                  "phoneNumber": "+34 54 54556 3433"
-                }
-              ],
-              "editMode": false,
-              "active": true,
-              "companyCallsList": [
-                {
-                  "date": "2008 3 4",
-                  "freeText": "Bla bla bla bla"
-                },
-                {
-                  "date": "2009 4 5",
-                  "freeText": "Olo lo lo lo lo"
-                },
-                {
-                  "date": "2010 5 6",
-                  "freeText": "Tra ta ta ta ta ta"
-                }
-              ]
-            },
-            {
-              "company": {
-                "title": "Incredible company",
-                "description": "Incredible of the incredible",
-                "phoneNumber": "5675476",
-                "country": "Israel",
-                "mainAddress": "Somewhere",
-                "companyNumber": "656645",
-                "mainEmail": "ghfg@hjhg.jh",
-                "workingHours1": "08:00",
-                "workingHours2": "19:00",
-                "status": "Something",
-                "ID": 154
-              },
-              "companyContactsList": [
-                {
-                  "companyName": "Name1",
-                  "companyRole": "Role1",
-                  "email": "email1@gmail.com",
-                  "phoneNumber": "+34 54 54556 3431"
-                },
-                {
-                  "companyName": "Name2",
-                  "companyRole": "Role2",
-                  "email": "email2@gmail.com",
-                  "phoneNumber": "+34 54 54556 3432"
-                },
-                {
-                  "companyName": "Name3",
-                  "companyRole": "Role3",
-                  "email": "email3@gmail.com",
-                  "phoneNumber": "+34 54 54556 3433"
-                }
-              ],
-              "editMode": false,
-              "active": true,
-              "companyCallsList": [
-                {
-                  "date": "2008 3 4",
-                  "freeText": "Bla bla bla bla"
-                },
-                {
-                  "date": "2009 4 5",
-                  "freeText": "Olo lo lo lo lo"
-                },
-                {
-                  "date": "2010 5 6",
-                  "freeText": "Tra ta ta ta ta ta"
-                }
-              ]
-            },
-            {
-              "company": {
-                "title": "Stupid",
-                "description": "Stupid of the stupid",
-                "phoneNumber": "5675476",
-                "country": "Israel",
-                "mainAddress": "Somewhere",
-                "companyNumber": "656645",
-                "mainEmail": "ghfg@hjhg.jh",
-                "workingHours1": "08:00",
-                "workingHours2": "19:00",
-                "status": "Something",
-                "ID": 155
-              },
-              "companyContactsList": [
-                {
-                  "companyName": "Name1",
-                  "companyRole": "Role1",
-                  "email": "email1@gmail.com",
-                  "phoneNumber": "+34 54 54556 3431"
-                },
-                {
-                  "companyName": "Name2",
-                  "companyRole": "Role2",
-                  "email": "email2@gmail.com",
-                  "phoneNumber": "+34 54 54556 3432"
-                },
-                {
-                  "companyName": "Name3",
-                  "companyRole": "Role3",
-                  "email": "email3@gmail.com",
-                  "phoneNumber": "+34 54 54556 3433"
-                }
-              ],
-              "editMode": false,
-              "active": true,
-              "companyCallsList": [
-                {
-                  "date": "2008 3 4",
-                  "freeText": "Bla bla bla bla"
-                },
-                {
-                  "date": "2009 4 5",
-                  "freeText": "Olo lo lo lo lo"
-                },
-                {
-                  "date": "2010 5 6",
-                  "freeText": "Tra ta ta ta ta ta"
-                }
-              ]
-            },
-            {
-              "company": {
-                "title": "Rich one",
-                "description": "Rich of the rich",
-                "phoneNumber": "5675476",
-                "country": "Israel",
-                "mainAddress": "Somewhere",
-                "companyNumber": "656645",
-                "mainEmail": "ghfg@hjhg.jh",
-                "workingHours1": "08:00",
-                "workingHours2": "19:00",
-                "status": "Something",
-                "ID": 156
-              },
-              "companyContactsList": [
-                {
-                  "companyName": "Name1",
-                  "companyRole": "Role1",
-                  "email": "email1@gmail.com",
-                  "phoneNumber": "+34 54 54556 3431"
-                },
-                {
-                  "companyName": "Name2",
-                  "companyRole": "Role2",
-                  "email": "email2@gmail.com",
-                  "phoneNumber": "+34 54 54556 3432"
-                },
-                {
-                  "companyName": "Name3",
-                  "companyRole": "Role3",
-                  "email": "email3@gmail.com",
-                  "phoneNumber": "+34 54 54556 3433"
-                }
-              ],
-              "editMode": false,
-              "active": true,
-              "companyCallsList": [
-                {
-                  "date": "2008 3 4",
-                  "freeText": "Bla bla bla bla"
-                },
-                {
-                  "date": "2009 4 5",
-                  "freeText": "Olo lo lo lo lo"
-                },
-                {
-                  "date": "2010 5 6",
-                  "freeText": "Tra ta ta ta ta ta"
-                }
-              ]
-            },
-            {
-              "company": {
-                "title": "Poor one",
-                "description": "Poor of the poor",
-                "phoneNumber": "5675476",
-                "country": "Israel",
-                "mainAddress": "Somewhere",
-                "companyNumber": "656645",
-                "mainEmail": "ghfg@hjhg.jh",
-                "workingHours1": "08:00",
-                "workingHours2": "19:00",
-                "status": "Something",
-                "ID": 157
-              },
-              "companyContactsList": [
-                {
-                  "companyName": "Name1",
-                  "companyRole": "Role1",
-                  "email": "email1@gmail.com",
-                  "phoneNumber": "+34 54 54556 3431"
-                },
-                {
-                  "companyName": "Name2",
-                  "companyRole": "Role2",
-                  "email": "email2@gmail.com",
-                  "phoneNumber": "+34 54 54556 3432"
-                },
-                {
-                  "companyName": "Name3",
-                  "companyRole": "Role3",
-                  "email": "email3@gmail.com",
-                  "phoneNumber": "+34 54 54556 3433"
-                }
-              ],
-              "editMode": false,
-              "active": true,
-              "companyCallsList": [
-                {
-                  "date": "2008 3 4",
-                  "freeText": "Bla bla bla bla"
-                },
-                {
-                  "date": "2009 4 5",
-                  "freeText": "Olo lo lo lo lo"
-                },
-                {
-                  "date": "2010 5 6",
-                  "freeText": "Tra ta ta ta ta ta"
-                }
-              ]
-            },
-            {
-              "company": {
-                "title": "Tramp man",
-                "description": "Tramps united",
-                "phoneNumber": "5675476",
-                "country": "Israel",
-                "mainAddress": "Somewhere",
-                "companyNumber": "656645",
-                "mainEmail": "ghfg@hjhg.jh",
-                "workingHours1": "08:00",
-                "workingHours2": "19:00",
-                "status": "Something",
-                "ID": 158
-              },
-              "companyContactsList": [
-                {
-                  "companyName": "Name1",
-                  "companyRole": "Role1",
-                  "email": "email1@gmail.com",
-                  "phoneNumber": "+34 54 54556 3431"
-                },
-                {
-                  "companyName": "Name2",
-                  "companyRole": "Role2",
-                  "email": "email2@gmail.com",
-                  "phoneNumber": "+34 54 54556 3432"
-                },
-                {
-                  "companyName": "Name3",
-                  "companyRole": "Role3",
-                  "email": "email3@gmail.com",
-                  "phoneNumber": "+34 54 54556 3433"
-                }
-              ],
-              "editMode": false,
-              "active": true,
-              "companyCallsList": [
-                {
-                  "date": "2008 3 4",
-                  "freeText": "Bla bla bla bla"
-                },
-                {
-                  "date": "2009 4 5",
-                  "freeText": "Olo lo lo lo lo"
-                },
-                {
-                  "date": "2010 5 6",
-                  "freeText": "Tra ta ta ta ta ta"
-                }
-              ]
-            },
-            {
-              "company": {
-                "title": "Obama man",
-                "description": "Obama is the president",
-                "phoneNumber": "5675476",
-                "country": "Israel",
-                "mainAddress": "Somewhere",
-                "companyNumber": "656645",
-                "mainEmail": "ghfg@hjhg.jh",
-                "workingHours1": "08:00",
-                "workingHours2": "19:00",
-                "status": "Something",
-                "ID": 159
-              },
-              "companyContactsList": [
-                {
-                  "companyName": "Name1",
-                  "companyRole": "Role1",
-                  "email": "email1@gmail.com",
-                  "phoneNumber": "+34 54 54556 3431"
-                },
-                {
-                  "companyName": "Name2",
-                  "companyRole": "Role2",
-                  "email": "email2@gmail.com",
-                  "phoneNumber": "+34 54 54556 3432"
-                },
-                {
-                  "companyName": "Name3",
-                  "companyRole": "Role3",
-                  "email": "email3@gmail.com",
-                  "phoneNumber": "+34 54 54556 3433"
-                }
-              ],
-              "editMode": false,
-              "active": true,
-              "companyCallsList": [
-                {
-                  "date": "2008 3 4",
-                  "freeText": "Bla bla bla bla"
-                },
-                {
-                  "date": "2009 4 5",
-                  "freeText": "Olo lo lo lo lo"
-                },
-                {
-                  "date": "2010 5 6",
-                  "freeText": "Tra ta ta ta ta ta"
-                }
-              ]
-            },
-            {
-              "company": {
-                "title": "Radiation protection",
-                "description": "We will protect you tomorrow",
-                "phoneNumber": "5675476",
-                "country": "Israel",
-                "mainAddress": "Somewhere",
-                "companyNumber": "656645",
-                "mainEmail": "ghfg@hjhg.jh",
-                "workingHours1": "08:00",
-                "workingHours2": "19:00",
-                "status": "Something",
-                "ID": 160
-              },
-              "companyContactsList": [
-                {
-                  "companyName": "Name1",
-                  "companyRole": "Role1",
-                  "email": "email1@gmail.com",
-                  "phoneNumber": "+34 54 54556 3431"
-                },
-                {
-                  "companyName": "Name2",
-                  "companyRole": "Role2",
-                  "email": "email2@gmail.com",
-                  "phoneNumber": "+34 54 54556 3432"
-                },
-                {
-                  "companyName": "Name3",
-                  "companyRole": "Role3",
-                  "email": "email3@gmail.com",
-                  "phoneNumber": "+34 54 54556 3433"
-                }
-              ],
-              "editMode": false,
-              "active": true,
-              "companyCallsList": [
-                {
-                  "date": "2008 3 4",
-                  "freeText": "Bla bla bla bla"
-                },
-                {
-                  "date": "2009 4 5",
-                  "freeText": "Olo lo lo lo lo"
-                },
-                {
-                  "date": "2010 5 6",
-                  "freeText": "Tra ta ta ta ta ta"
-                }
-              ]
-            },
-            {
-              "company": {
-                "title": "Red book",
-                "description": "Protect the beast",
-                "phoneNumber": "5675476",
-                "country": "Israel",
-                "mainAddress": "Somewhere",
-                "companyNumber": "656645",
-                "mainEmail": "ghfg@hjhg.jh",
-                "workingHours1": "08:00",
-                "workingHours2": "19:00",
-                "status": "Something",
-                "ID": 161
-              },
-              "companyContactsList": [
-                {
-                  "companyName": "Name1",
-                  "companyRole": "Role1",
-                  "email": "email1@gmail.com",
-                  "phoneNumber": "+34 54 54556 3431"
-                },
-                {
-                  "companyName": "Name2",
-                  "companyRole": "Role2",
-                  "email": "email2@gmail.com",
-                  "phoneNumber": "+34 54 54556 3432"
-                },
-                {
-                  "companyName": "Name3",
-                  "companyRole": "Role3",
-                  "email": "email3@gmail.com",
-                  "phoneNumber": "+34 54 54556 3433"
-                }
-              ],
-              "editMode": false,
-              "active": true,
-              "companyCallsList": [
-                {
-                  "date": "2008 3 4",
-                  "freeText": "Bla bla bla bla"
-                },
-                {
-                  "date": "2009 4 5",
-                  "freeText": "Olo lo lo lo lo"
-                },
-                {
-                  "date": "2010 5 6",
-                  "freeText": "Tra ta ta ta ta ta"
-                }
-              ]
-            },
-            {
-              "company": {
-                "title": "The Last",
-                "description": "Last chance",
-                "phoneNumber": "5675476",
-                "country": "Israel",
-                "mainAddress": "Somewhere",
-                "companyNumber": "656645",
-                "mainEmail": "ghfg@hjhg.jh",
-                "workingHours1": "08:00",
-                "workingHours2": "19:00",
-                "status": "Something",
-                "ID": 162
-              },
-              "companyContactsList": [
-                {
-                  "companyName": "Name1",
-                  "companyRole": "Role1",
-                  "email": "email1@gmail.com",
-                  "phoneNumber": "+34 54 54556 3431"
-                },
-                {
-                  "companyName": "Name2",
-                  "companyRole": "Role2",
-                  "email": "email2@gmail.com",
-                  "phoneNumber": "+34 54 54556 3432"
-                },
-                {
-                  "companyName": "Name3",
-                  "companyRole": "Role3",
-                  "email": "email3@gmail.com",
-                  "phoneNumber": "+34 54 54556 3433"
-                }
-              ],
-              "editMode": false,
-              "active": true,
-              "companyCallsList": [
-                {
-                  "date": "2008 3 4",
-                  "freeText": "Bla bla bla bla"
-                },
-                {
-                  "date": "2009 4 5",
-                  "freeText": "Olo lo lo lo lo"
-                },
-                {
-                  "date": "2010 5 6",
-                  "freeText": "Tra ta ta ta ta ta"
-                }
-              ]
+              "companyName": "Name3",
+              "companyRole": "Role3",
+              "email": "email3@gmail.com",
+              "phoneNumber": "+34 54 54556 3433"
             }
-        
+          ],
+          "editMode": false,
+          "active": true,
+          "companyCallsList": [
+            {
+              "date": "2008-3-4",
+              "freeText": "Bla bla bla bla"
+            },
+            {
+              "date": "2009-4-5",
+              "freeText": "Olo lo lo lo lo"
+            },
+            {
+              "date": "2010-5-6",
+              "freeText": "Tra ta ta ta ta ta"
+            }
           ]
         }
         
 ## Base for autocomplete [/autocompleteBase]
-
 ### Whole base for autocomplete [GET]
-
 + Response 200 (application/json)
 
         {
-        
           "Cities": {
             "Israel": {
               "list": "Yokneam Yehud-Monosson Yavne Umm al-Fahm Tirat Carmel Tira Tiberias Tel-Aviv Tayibe Tamra Shefa-'Amr (Shfar'am) Sderot Sakhnin Safed Rosh HaAyin Rishon LeZion Rehovot Ramla Ramat HaSharon Ramat Gan Rahat Ra'anana Qalansawe Petah Tikva Or Yehuda Or Akiva Ofakim Netivot Netanya Ness Ziona Nesher Nazareth Illit Nazareth Nahariya Modi'in-Maccabim-Re'ut  Modi'in Illit Migdal HaEmek Ma'alot-Tarshiha  Ma'ale Adumim Lod Kiryat Yam Kiryat Shmona Kiryat Ono Kiryat Motzkin Kiryat Malakhi Kiryat Gat Kiryat Bialik Kiryat Ata Kfar Saba Kafr Qasim Karmiel Jerusalem Holon Hod HaSharon Herzliya Haifa Hadera Giv'at Shmuel Giv'atayim El'ad Eilat Dimona Bnei Brak  Beitar Illit Beit Shemesh Beit She'an Beersheba Bat Yam Baqa-Jatt Ashkelon Ashdod  Ariel Arad Afula Acre"
@@ -2598,17 +248,14 @@ Smart HR API.
           "Companies": {
             "list": "UVision SecondCompany ThirdCompany FourthCompany"
           }
-        
         }
         
 ## ShortCandidate [/candidateslist]
-
 ### Short Candidates [GET]
-
 + Response 200 (application/json)
 
         {
-            "ID": 150,
+            "personID": "111235",
             "firstName": "Clark",
             "lastName": "Kent",
             "currentLastJob": "Good company",
@@ -2617,5 +264,35 @@ Smart HR API.
             "email": "fdsf@fdfs.gf",
             "academic": "Professor",
             "coursesDiplomas": "Diploma of nothing",
-            "apps": "some app"
+            "apps": "some app",
+            "id": 1
+        }
+        
+## ShortJobsList [/jobslist]
+### Short Jobs [GET]
++ Response 200 (application/json)     
+
+        {
+            "jobTitle": "ggg",
+            "maxSalary": 1000,
+            "location": "some location", 
+            "apps": "some app",
+            "lastUpdatedDate": "2008-3-4",
+            "requiredLevel": "senior",
+            "active": true,
+            "id": 1
+        }
+        
+## ShortCompaniesList [/companieslist]
+### Short Companies [GET]
++ Response 200 (application/json)     
+
+        {
+            "companyName": "ggg",
+            "address": "some address",
+            "openPositions": "some positions", 
+            "status": "active",
+            "lastUpdated": "2008-3-4",
+            "active": true,
+            "id": 1
         }
