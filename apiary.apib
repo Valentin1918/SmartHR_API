@@ -301,7 +301,8 @@ Smart HR API.
 ### Application [GET]
 + Response 200 (application/json) 
 
-    {
+   {
+      "company": {
         "companyContactName": "firstCompany",
         "companyContactNumber": "+38 050 648 51 21",
         "requirements": [
@@ -312,4 +313,19 @@ Smart HR API.
         ],
         "salary": 5000,
         "status": "candidateExists"
+      },
+      "candidate": {
+        "candidateContactName": "John Doe",
+        "candidateContactNumber": "+38 093 357 15 95",
+        "skills": [
+          {"selected": "JS", "knowledge": "8"},
+          {"selected": "JQuery", "knowledge": "6"},
+          {"selected": "AngularJS", "knowledge": "4"},
+          {"selected": "PHP", "knowledge": "5"}
+        ],
+        "salary": {
+          "from": 4000,
+          "to": 8000
+        }
+      }
     }
